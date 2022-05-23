@@ -1,0 +1,12 @@
+{
+    "email": "البريد الإلكتروني",
+    "password": "كلمه السر",
+    "signIn":"تسجيل الدخول",
+    "register": "مستخدم جديد",
+    "signInWithGoogle": "تسجيل الدخول عبر Google",
+    "invalid": "غير صالح {whatIsInvalid}",
+    "cancelledFailure": "ألغيت",
+    "serverErrorFailure": "خطأ في الخادم",
+    "emailAlreadyInUseFailure": "البريد الاليكتروني قيد الاستخدام",
+    "invalidEmailAndPasswordCombinationFailure": "البريد الإلكتروني أو كلمة السر خاطئة"
+}
