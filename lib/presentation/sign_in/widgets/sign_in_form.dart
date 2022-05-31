@@ -28,7 +28,8 @@ class SignInForm extends StatelessWidget {
               ),
             ).show(context),
             (_) {
-              AutoRouter.of(context).replace(const RecipeOverviewPageRoute());
+              context.router.replace(const RecipeOverviewPageWraperRoute(
+                  children: [RecipesOverviewPageRoute()]));
               context
                   .read<AuthBloc>()
                   .add(const AuthEvent.authCheckRequested());

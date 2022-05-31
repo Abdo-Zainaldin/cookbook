@@ -1,17 +1,17 @@
 import 'package:cookbook_app/domain/core/value_objects.dart';
 import 'package:cookbook_app/domain/recipes/value_objects.dart';
 import 'package:cookbook_app/presentation/localization/l10n/localization_helper.dart';
-import 'package:cookbook_app/presentation/recipes/recipe_forms/misc/build_context_x.dart';
+import 'package:cookbook_app/presentation/recipes/recipe_form/misc/build_context_x.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:kt_dart/kt.dart';
 
 import '../../../../../application/recipe_form/recipe_form_bloc.dart';
-import '../../misc/recipe_items_presentation_classes.dart';
+import '../misc/recipe_items_presentation_classes.dart';
 
-class AddIngredientTile extends HookWidget {
-  const AddIngredientTile({Key? key}) : super(key: key);
+class AddIngredientField extends HookWidget {
+  const AddIngredientField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

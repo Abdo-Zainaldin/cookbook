@@ -18,31 +18,37 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$RecipeFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Recipe initialRecipe) initialized,
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
     required TResult Function(String nameStr) nameChanged,
     required TResult Function(KtList<IngredientItemPrimitive> ingredients)
         ingredientsChanged,
     required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
     required TResult Function() saved,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
     required TResult orElse(),
   }) =>
@@ -53,6 +59,9 @@ mixin _$RecipeFormEvent {
     required TResult Function(NameChanged value) nameChanged,
     required TResult Function(IngredientsChanged value) ingredientsChanged,
     required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
     required TResult Function(Saved value) saved,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +71,9 @@ mixin _$RecipeFormEvent {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +83,9 @@ mixin _$RecipeFormEvent {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
     required TResult orElse(),
   }) =>
@@ -99,9 +114,7 @@ abstract class $InitializedCopyWith<$Res> {
   factory $InitializedCopyWith(
           Initialized value, $Res Function(Initialized) then) =
       _$InitializedCopyWithImpl<$Res>;
-  $Res call({Recipe initialRecipe});
-
-  $RecipeCopyWith<$Res> get initialRecipe;
+  $Res call({Option<Recipe> initialRecipeOption});
 }
 
 /// @nodoc
@@ -117,35 +130,28 @@ class _$InitializedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? initialRecipe = freezed,
+    Object? initialRecipeOption = freezed,
   }) {
     return _then(Initialized(
-      initialRecipe == freezed
-          ? _value.initialRecipe
-          : initialRecipe // ignore: cast_nullable_to_non_nullable
-              as Recipe,
+      initialRecipeOption == freezed
+          ? _value.initialRecipeOption
+          : initialRecipeOption // ignore: cast_nullable_to_non_nullable
+              as Option<Recipe>,
     ));
-  }
-
-  @override
-  $RecipeCopyWith<$Res> get initialRecipe {
-    return $RecipeCopyWith<$Res>(_value.initialRecipe, (value) {
-      return _then(_value.copyWith(initialRecipe: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$Initialized implements Initialized {
-  const _$Initialized(this.initialRecipe);
+  const _$Initialized(this.initialRecipeOption);
 
   @override
-  final Recipe initialRecipe;
+  final Option<Recipe> initialRecipeOption;
 
   @override
   String toString() {
-    return 'RecipeFormEvent.initialized(initialRecipe: $initialRecipe)';
+    return 'RecipeFormEvent.initialized(initialRecipeOption: $initialRecipeOption)';
   }
 
   @override
@@ -154,12 +160,12 @@ class _$Initialized implements Initialized {
         (other.runtimeType == runtimeType &&
             other is Initialized &&
             const DeepCollectionEquality()
-                .equals(other.initialRecipe, initialRecipe));
+                .equals(other.initialRecipeOption, initialRecipeOption));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(initialRecipe));
+      runtimeType, const DeepCollectionEquality().hash(initialRecipeOption));
 
   @JsonKey(ignore: true)
   @override
@@ -169,42 +175,48 @@ class _$Initialized implements Initialized {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Recipe initialRecipe) initialized,
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
     required TResult Function(String nameStr) nameChanged,
     required TResult Function(KtList<IngredientItemPrimitive> ingredients)
         ingredientsChanged,
     required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
     required TResult Function() saved,
   }) {
-    return initialized(initialRecipe);
+    return initialized(initialRecipeOption);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
   }) {
-    return initialized?.call(initialRecipe);
+    return initialized?.call(initialRecipeOption);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
     if (initialized != null) {
-      return initialized(initialRecipe);
+      return initialized(initialRecipeOption);
     }
     return orElse();
   }
@@ -216,6 +228,9 @@ class _$Initialized implements Initialized {
     required TResult Function(NameChanged value) nameChanged,
     required TResult Function(IngredientsChanged value) ingredientsChanged,
     required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
     required TResult Function(Saved value) saved,
   }) {
     return initialized(this);
@@ -228,6 +243,9 @@ class _$Initialized implements Initialized {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
   }) {
     return initialized?.call(this);
@@ -240,6 +258,9 @@ class _$Initialized implements Initialized {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -251,9 +272,10 @@ class _$Initialized implements Initialized {
 }
 
 abstract class Initialized implements RecipeFormEvent {
-  const factory Initialized(final Recipe initialRecipe) = _$Initialized;
+  const factory Initialized(final Option<Recipe> initialRecipeOption) =
+      _$Initialized;
 
-  Recipe get initialRecipe => throw _privateConstructorUsedError;
+  Option<Recipe> get initialRecipeOption => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $InitializedCopyWith<Initialized> get copyWith =>
       throw _privateConstructorUsedError;
@@ -324,11 +346,13 @@ class _$NameChanged implements NameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Recipe initialRecipe) initialized,
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
     required TResult Function(String nameStr) nameChanged,
     required TResult Function(KtList<IngredientItemPrimitive> ingredients)
         ingredientsChanged,
     required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
     required TResult Function() saved,
   }) {
     return nameChanged(nameStr);
@@ -337,11 +361,13 @@ class _$NameChanged implements NameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
   }) {
     return nameChanged?.call(nameStr);
@@ -350,11 +376,13 @@ class _$NameChanged implements NameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -371,6 +399,9 @@ class _$NameChanged implements NameChanged {
     required TResult Function(NameChanged value) nameChanged,
     required TResult Function(IngredientsChanged value) ingredientsChanged,
     required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
     required TResult Function(Saved value) saved,
   }) {
     return nameChanged(this);
@@ -383,6 +414,9 @@ class _$NameChanged implements NameChanged {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
   }) {
     return nameChanged?.call(this);
@@ -395,6 +429,9 @@ class _$NameChanged implements NameChanged {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -480,11 +517,13 @@ class _$IngredientsChanged implements IngredientsChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Recipe initialRecipe) initialized,
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
     required TResult Function(String nameStr) nameChanged,
     required TResult Function(KtList<IngredientItemPrimitive> ingredients)
         ingredientsChanged,
     required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
     required TResult Function() saved,
   }) {
     return ingredientsChanged(ingredients);
@@ -493,11 +532,13 @@ class _$IngredientsChanged implements IngredientsChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
   }) {
     return ingredientsChanged?.call(ingredients);
@@ -506,11 +547,13 @@ class _$IngredientsChanged implements IngredientsChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -527,6 +570,9 @@ class _$IngredientsChanged implements IngredientsChanged {
     required TResult Function(NameChanged value) nameChanged,
     required TResult Function(IngredientsChanged value) ingredientsChanged,
     required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
     required TResult Function(Saved value) saved,
   }) {
     return ingredientsChanged(this);
@@ -539,6 +585,9 @@ class _$IngredientsChanged implements IngredientsChanged {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
   }) {
     return ingredientsChanged?.call(this);
@@ -551,6 +600,9 @@ class _$IngredientsChanged implements IngredientsChanged {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -637,11 +689,13 @@ class _$StepsChanged implements StepsChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Recipe initialRecipe) initialized,
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
     required TResult Function(String nameStr) nameChanged,
     required TResult Function(KtList<IngredientItemPrimitive> ingredients)
         ingredientsChanged,
     required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
     required TResult Function() saved,
   }) {
     return stepsChanged(steps);
@@ -650,11 +704,13 @@ class _$StepsChanged implements StepsChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
   }) {
     return stepsChanged?.call(steps);
@@ -663,11 +719,13 @@ class _$StepsChanged implements StepsChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -684,6 +742,9 @@ class _$StepsChanged implements StepsChanged {
     required TResult Function(NameChanged value) nameChanged,
     required TResult Function(IngredientsChanged value) ingredientsChanged,
     required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
     required TResult Function(Saved value) saved,
   }) {
     return stepsChanged(this);
@@ -696,6 +757,9 @@ class _$StepsChanged implements StepsChanged {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
   }) {
     return stepsChanged?.call(this);
@@ -708,6 +772,9 @@ class _$StepsChanged implements StepsChanged {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -726,6 +793,323 @@ abstract class StepsChanged implements RecipeFormEvent {
   @JsonKey(ignore: true)
   $StepsChangedCopyWith<StepsChanged> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreatingRecipePageIngdexChangedCopyWith<$Res> {
+  factory $CreatingRecipePageIngdexChangedCopyWith(
+          CreatingRecipePageIngdexChanged value,
+          $Res Function(CreatingRecipePageIngdexChanged) then) =
+      _$CreatingRecipePageIngdexChangedCopyWithImpl<$Res>;
+  $Res call({int index});
+}
+
+/// @nodoc
+class _$CreatingRecipePageIngdexChangedCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res>
+    implements $CreatingRecipePageIngdexChangedCopyWith<$Res> {
+  _$CreatingRecipePageIngdexChangedCopyWithImpl(
+      CreatingRecipePageIngdexChanged _value,
+      $Res Function(CreatingRecipePageIngdexChanged) _then)
+      : super(_value, (v) => _then(v as CreatingRecipePageIngdexChanged));
+
+  @override
+  CreatingRecipePageIngdexChanged get _value =>
+      super._value as CreatingRecipePageIngdexChanged;
+
+  @override
+  $Res call({
+    Object? index = freezed,
+  }) {
+    return _then(CreatingRecipePageIngdexChanged(
+      index == freezed
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreatingRecipePageIngdexChanged
+    implements CreatingRecipePageIngdexChanged {
+  const _$CreatingRecipePageIngdexChanged(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.creatingRecipePageIngdexChanged(index: $index)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CreatingRecipePageIngdexChanged &&
+            const DeepCollectionEquality().equals(other.index, index));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(index));
+
+  @JsonKey(ignore: true)
+  @override
+  $CreatingRecipePageIngdexChangedCopyWith<CreatingRecipePageIngdexChanged>
+      get copyWith => _$CreatingRecipePageIngdexChangedCopyWithImpl<
+          CreatingRecipePageIngdexChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
+    required TResult Function(String nameStr) nameChanged,
+    required TResult Function(KtList<IngredientItemPrimitive> ingredients)
+        ingredientsChanged,
+    required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
+    required TResult Function() saved,
+  }) {
+    return creatingRecipePageIngdexChanged(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
+    TResult Function(String nameStr)? nameChanged,
+    TResult Function(KtList<IngredientItemPrimitive> ingredients)?
+        ingredientsChanged,
+    TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
+    TResult Function()? saved,
+  }) {
+    return creatingRecipePageIngdexChanged?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
+    TResult Function(String nameStr)? nameChanged,
+    TResult Function(KtList<IngredientItemPrimitive> ingredients)?
+        ingredientsChanged,
+    TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
+    TResult Function()? saved,
+    required TResult orElse(),
+  }) {
+    if (creatingRecipePageIngdexChanged != null) {
+      return creatingRecipePageIngdexChanged(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initialized value) initialized,
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(IngredientsChanged value) ingredientsChanged,
+    required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
+    required TResult Function(Saved value) saved,
+  }) {
+    return creatingRecipePageIngdexChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initialized value)? initialized,
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(IngredientsChanged value)? ingredientsChanged,
+    TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
+    TResult Function(Saved value)? saved,
+  }) {
+    return creatingRecipePageIngdexChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initialized value)? initialized,
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(IngredientsChanged value)? ingredientsChanged,
+    TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
+    TResult Function(Saved value)? saved,
+    required TResult orElse(),
+  }) {
+    if (creatingRecipePageIngdexChanged != null) {
+      return creatingRecipePageIngdexChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreatingRecipePageIngdexChanged implements RecipeFormEvent {
+  const factory CreatingRecipePageIngdexChanged(final int index) =
+      _$CreatingRecipePageIngdexChanged;
+
+  int get index => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreatingRecipePageIngdexChangedCopyWith<CreatingRecipePageIngdexChanged>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EditingModeOnOffCopyWith<$Res> {
+  factory $EditingModeOnOffCopyWith(
+          EditingModeOnOff value, $Res Function(EditingModeOnOff) then) =
+      _$EditingModeOnOffCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$EditingModeOnOffCopyWithImpl<$Res>
+    extends _$RecipeFormEventCopyWithImpl<$Res>
+    implements $EditingModeOnOffCopyWith<$Res> {
+  _$EditingModeOnOffCopyWithImpl(
+      EditingModeOnOff _value, $Res Function(EditingModeOnOff) _then)
+      : super(_value, (v) => _then(v as EditingModeOnOff));
+
+  @override
+  EditingModeOnOff get _value => super._value as EditingModeOnOff;
+}
+
+/// @nodoc
+
+class _$EditingModeOnOff implements EditingModeOnOff {
+  const _$EditingModeOnOff();
+
+  @override
+  String toString() {
+    return 'RecipeFormEvent.editingModeOnOff()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is EditingModeOnOff);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
+    required TResult Function(String nameStr) nameChanged,
+    required TResult Function(KtList<IngredientItemPrimitive> ingredients)
+        ingredientsChanged,
+    required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
+    required TResult Function() saved,
+  }) {
+    return editingModeOnOff();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
+    TResult Function(String nameStr)? nameChanged,
+    TResult Function(KtList<IngredientItemPrimitive> ingredients)?
+        ingredientsChanged,
+    TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
+    TResult Function()? saved,
+  }) {
+    return editingModeOnOff?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
+    TResult Function(String nameStr)? nameChanged,
+    TResult Function(KtList<IngredientItemPrimitive> ingredients)?
+        ingredientsChanged,
+    TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
+    TResult Function()? saved,
+    required TResult orElse(),
+  }) {
+    if (editingModeOnOff != null) {
+      return editingModeOnOff();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initialized value) initialized,
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(IngredientsChanged value) ingredientsChanged,
+    required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
+    required TResult Function(Saved value) saved,
+  }) {
+    return editingModeOnOff(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initialized value)? initialized,
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(IngredientsChanged value)? ingredientsChanged,
+    TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
+    TResult Function(Saved value)? saved,
+  }) {
+    return editingModeOnOff?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initialized value)? initialized,
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(IngredientsChanged value)? ingredientsChanged,
+    TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
+    TResult Function(Saved value)? saved,
+    required TResult orElse(),
+  }) {
+    if (editingModeOnOff != null) {
+      return editingModeOnOff(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditingModeOnOff implements RecipeFormEvent {
+  const factory EditingModeOnOff() = _$EditingModeOnOff;
 }
 
 /// @nodoc
@@ -766,11 +1150,13 @@ class _$Saved implements Saved {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Recipe initialRecipe) initialized,
+    required TResult Function(Option<Recipe> initialRecipeOption) initialized,
     required TResult Function(String nameStr) nameChanged,
     required TResult Function(KtList<IngredientItemPrimitive> ingredients)
         ingredientsChanged,
     required TResult Function(KtList<StepItemPrimitive> steps) stepsChanged,
+    required TResult Function(int index) creatingRecipePageIngdexChanged,
+    required TResult Function() editingModeOnOff,
     required TResult Function() saved,
   }) {
     return saved();
@@ -779,11 +1165,13 @@ class _$Saved implements Saved {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
   }) {
     return saved?.call();
@@ -792,11 +1180,13 @@ class _$Saved implements Saved {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Recipe initialRecipe)? initialized,
+    TResult Function(Option<Recipe> initialRecipeOption)? initialized,
     TResult Function(String nameStr)? nameChanged,
     TResult Function(KtList<IngredientItemPrimitive> ingredients)?
         ingredientsChanged,
     TResult Function(KtList<StepItemPrimitive> steps)? stepsChanged,
+    TResult Function(int index)? creatingRecipePageIngdexChanged,
+    TResult Function()? editingModeOnOff,
     TResult Function()? saved,
     required TResult orElse(),
   }) {
@@ -813,6 +1203,9 @@ class _$Saved implements Saved {
     required TResult Function(NameChanged value) nameChanged,
     required TResult Function(IngredientsChanged value) ingredientsChanged,
     required TResult Function(StepsChanged value) stepsChanged,
+    required TResult Function(CreatingRecipePageIngdexChanged value)
+        creatingRecipePageIngdexChanged,
+    required TResult Function(EditingModeOnOff value) editingModeOnOff,
     required TResult Function(Saved value) saved,
   }) {
     return saved(this);
@@ -825,6 +1218,9 @@ class _$Saved implements Saved {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
   }) {
     return saved?.call(this);
@@ -837,6 +1233,9 @@ class _$Saved implements Saved {
     TResult Function(NameChanged value)? nameChanged,
     TResult Function(IngredientsChanged value)? ingredientsChanged,
     TResult Function(StepsChanged value)? stepsChanged,
+    TResult Function(CreatingRecipePageIngdexChanged value)?
+        creatingRecipePageIngdexChanged,
+    TResult Function(EditingModeOnOff value)? editingModeOnOff,
     TResult Function(Saved value)? saved,
     required TResult orElse(),
   }) {
@@ -854,9 +1253,13 @@ abstract class Saved implements RecipeFormEvent {
 /// @nodoc
 mixin _$RecipeFormState {
   Recipe get recipe => throw _privateConstructorUsedError;
+  Recipe get initialRecipe => throw _privateConstructorUsedError;
+  int get creatingRecipePageIndex => throw _privateConstructorUsedError;
   bool get showErrorMessages => throw _privateConstructorUsedError;
   bool get isEditing => throw _privateConstructorUsedError;
+  bool get isCreating => throw _privateConstructorUsedError;
   bool get isSaving => throw _privateConstructorUsedError;
+  bool get successfullySaved => throw _privateConstructorUsedError;
   Option<Either<RecipeFailure, Unit>> get saveFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
@@ -872,12 +1275,17 @@ abstract class $RecipeFormStateCopyWith<$Res> {
       _$RecipeFormStateCopyWithImpl<$Res>;
   $Res call(
       {Recipe recipe,
+      Recipe initialRecipe,
+      int creatingRecipePageIndex,
       bool showErrorMessages,
       bool isEditing,
+      bool isCreating,
       bool isSaving,
+      bool successfullySaved,
       Option<Either<RecipeFailure, Unit>> saveFailureOrSuccessOption});
 
   $RecipeCopyWith<$Res> get recipe;
+  $RecipeCopyWith<$Res> get initialRecipe;
 }
 
 /// @nodoc
@@ -892,9 +1300,13 @@ class _$RecipeFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? recipe = freezed,
+    Object? initialRecipe = freezed,
+    Object? creatingRecipePageIndex = freezed,
     Object? showErrorMessages = freezed,
     Object? isEditing = freezed,
+    Object? isCreating = freezed,
     Object? isSaving = freezed,
+    Object? successfullySaved = freezed,
     Object? saveFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
@@ -902,6 +1314,14 @@ class _$RecipeFormStateCopyWithImpl<$Res>
           ? _value.recipe
           : recipe // ignore: cast_nullable_to_non_nullable
               as Recipe,
+      initialRecipe: initialRecipe == freezed
+          ? _value.initialRecipe
+          : initialRecipe // ignore: cast_nullable_to_non_nullable
+              as Recipe,
+      creatingRecipePageIndex: creatingRecipePageIndex == freezed
+          ? _value.creatingRecipePageIndex
+          : creatingRecipePageIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
@@ -910,9 +1330,17 @@ class _$RecipeFormStateCopyWithImpl<$Res>
           ? _value.isEditing
           : isEditing // ignore: cast_nullable_to_non_nullable
               as bool,
+      isCreating: isCreating == freezed
+          ? _value.isCreating
+          : isCreating // ignore: cast_nullable_to_non_nullable
+              as bool,
       isSaving: isSaving == freezed
           ? _value.isSaving
           : isSaving // ignore: cast_nullable_to_non_nullable
+              as bool,
+      successfullySaved: successfullySaved == freezed
+          ? _value.successfullySaved
+          : successfullySaved // ignore: cast_nullable_to_non_nullable
               as bool,
       saveFailureOrSuccessOption: saveFailureOrSuccessOption == freezed
           ? _value.saveFailureOrSuccessOption
@@ -927,6 +1355,13 @@ class _$RecipeFormStateCopyWithImpl<$Res>
       return _then(_value.copyWith(recipe: value));
     });
   }
+
+  @override
+  $RecipeCopyWith<$Res> get initialRecipe {
+    return $RecipeCopyWith<$Res>(_value.initialRecipe, (value) {
+      return _then(_value.copyWith(initialRecipe: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -938,13 +1373,19 @@ abstract class _$RecipeFormStateCopyWith<$Res>
   @override
   $Res call(
       {Recipe recipe,
+      Recipe initialRecipe,
+      int creatingRecipePageIndex,
       bool showErrorMessages,
       bool isEditing,
+      bool isCreating,
       bool isSaving,
+      bool successfullySaved,
       Option<Either<RecipeFailure, Unit>> saveFailureOrSuccessOption});
 
   @override
   $RecipeCopyWith<$Res> get recipe;
+  @override
+  $RecipeCopyWith<$Res> get initialRecipe;
 }
 
 /// @nodoc
@@ -961,9 +1402,13 @@ class __$RecipeFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? recipe = freezed,
+    Object? initialRecipe = freezed,
+    Object? creatingRecipePageIndex = freezed,
     Object? showErrorMessages = freezed,
     Object? isEditing = freezed,
+    Object? isCreating = freezed,
     Object? isSaving = freezed,
+    Object? successfullySaved = freezed,
     Object? saveFailureOrSuccessOption = freezed,
   }) {
     return _then(_RecipeFormState(
@@ -971,6 +1416,14 @@ class __$RecipeFormStateCopyWithImpl<$Res>
           ? _value.recipe
           : recipe // ignore: cast_nullable_to_non_nullable
               as Recipe,
+      initialRecipe: initialRecipe == freezed
+          ? _value.initialRecipe
+          : initialRecipe // ignore: cast_nullable_to_non_nullable
+              as Recipe,
+      creatingRecipePageIndex: creatingRecipePageIndex == freezed
+          ? _value.creatingRecipePageIndex
+          : creatingRecipePageIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
@@ -979,9 +1432,17 @@ class __$RecipeFormStateCopyWithImpl<$Res>
           ? _value.isEditing
           : isEditing // ignore: cast_nullable_to_non_nullable
               as bool,
+      isCreating: isCreating == freezed
+          ? _value.isCreating
+          : isCreating // ignore: cast_nullable_to_non_nullable
+              as bool,
       isSaving: isSaving == freezed
           ? _value.isSaving
           : isSaving // ignore: cast_nullable_to_non_nullable
+              as bool,
+      successfullySaved: successfullySaved == freezed
+          ? _value.successfullySaved
+          : successfullySaved // ignore: cast_nullable_to_non_nullable
               as bool,
       saveFailureOrSuccessOption: saveFailureOrSuccessOption == freezed
           ? _value.saveFailureOrSuccessOption
@@ -996,25 +1457,37 @@ class __$RecipeFormStateCopyWithImpl<$Res>
 class _$_RecipeFormState implements _RecipeFormState {
   const _$_RecipeFormState(
       {required this.recipe,
+      required this.initialRecipe,
+      required this.creatingRecipePageIndex,
       required this.showErrorMessages,
       required this.isEditing,
+      required this.isCreating,
       required this.isSaving,
+      required this.successfullySaved,
       required this.saveFailureOrSuccessOption});
 
   @override
   final Recipe recipe;
   @override
+  final Recipe initialRecipe;
+  @override
+  final int creatingRecipePageIndex;
+  @override
   final bool showErrorMessages;
   @override
   final bool isEditing;
   @override
+  final bool isCreating;
+  @override
   final bool isSaving;
+  @override
+  final bool successfullySaved;
   @override
   final Option<Either<RecipeFailure, Unit>> saveFailureOrSuccessOption;
 
   @override
   String toString() {
-    return 'RecipeFormState(recipe: $recipe, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isSaving: $isSaving, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
+    return 'RecipeFormState(recipe: $recipe, initialRecipe: $initialRecipe, creatingRecipePageIndex: $creatingRecipePageIndex, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isCreating: $isCreating, isSaving: $isSaving, successfullySaved: $successfullySaved, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
   }
 
   @override
@@ -1024,9 +1497,17 @@ class _$_RecipeFormState implements _RecipeFormState {
             other is _RecipeFormState &&
             const DeepCollectionEquality().equals(other.recipe, recipe) &&
             const DeepCollectionEquality()
+                .equals(other.initialRecipe, initialRecipe) &&
+            const DeepCollectionEquality().equals(
+                other.creatingRecipePageIndex, creatingRecipePageIndex) &&
+            const DeepCollectionEquality()
                 .equals(other.showErrorMessages, showErrorMessages) &&
             const DeepCollectionEquality().equals(other.isEditing, isEditing) &&
+            const DeepCollectionEquality()
+                .equals(other.isCreating, isCreating) &&
             const DeepCollectionEquality().equals(other.isSaving, isSaving) &&
+            const DeepCollectionEquality()
+                .equals(other.successfullySaved, successfullySaved) &&
             const DeepCollectionEquality().equals(
                 other.saveFailureOrSuccessOption, saveFailureOrSuccessOption));
   }
@@ -1035,9 +1516,13 @@ class _$_RecipeFormState implements _RecipeFormState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(recipe),
+      const DeepCollectionEquality().hash(initialRecipe),
+      const DeepCollectionEquality().hash(creatingRecipePageIndex),
       const DeepCollectionEquality().hash(showErrorMessages),
       const DeepCollectionEquality().hash(isEditing),
+      const DeepCollectionEquality().hash(isCreating),
       const DeepCollectionEquality().hash(isSaving),
+      const DeepCollectionEquality().hash(successfullySaved),
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption));
 
   @JsonKey(ignore: true)
@@ -1049,20 +1534,32 @@ class _$_RecipeFormState implements _RecipeFormState {
 abstract class _RecipeFormState implements RecipeFormState {
   const factory _RecipeFormState(
       {required final Recipe recipe,
+      required final Recipe initialRecipe,
+      required final int creatingRecipePageIndex,
       required final bool showErrorMessages,
       required final bool isEditing,
+      required final bool isCreating,
       required final bool isSaving,
+      required final bool successfullySaved,
       required final Option<Either<RecipeFailure, Unit>>
           saveFailureOrSuccessOption}) = _$_RecipeFormState;
 
   @override
   Recipe get recipe => throw _privateConstructorUsedError;
   @override
+  Recipe get initialRecipe => throw _privateConstructorUsedError;
+  @override
+  int get creatingRecipePageIndex => throw _privateConstructorUsedError;
+  @override
   bool get showErrorMessages => throw _privateConstructorUsedError;
   @override
   bool get isEditing => throw _privateConstructorUsedError;
   @override
+  bool get isCreating => throw _privateConstructorUsedError;
+  @override
   bool get isSaving => throw _privateConstructorUsedError;
+  @override
+  bool get successfullySaved => throw _privateConstructorUsedError;
   @override
   Option<Either<RecipeFailure, Unit>> get saveFailureOrSuccessOption =>
       throw _privateConstructorUsedError;

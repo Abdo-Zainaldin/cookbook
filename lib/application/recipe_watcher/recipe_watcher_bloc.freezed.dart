@@ -21,40 +21,40 @@ mixin _$RecipeWatcherEvent {
     required TResult Function() watchAllStarted,
     required TResult Function(
             Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)
-        recipeReceived,
+        recipesReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? watchAllStarted,
     TResult Function(Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)?
-        recipeReceived,
+        recipesReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? watchAllStarted,
     TResult Function(Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)?
-        recipeReceived,
+        recipesReceived,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(WatchAllStarted value) watchAllStarted,
-    required TResult Function(RecipeReceived value) recipeReceived,
+    required TResult Function(RecipesReceived value) recipesReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(WatchAllStarted value)? watchAllStarted,
-    TResult Function(RecipeReceived value)? recipeReceived,
+    TResult Function(RecipesReceived value)? recipesReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(WatchAllStarted value)? watchAllStarted,
-    TResult Function(RecipeReceived value)? recipeReceived,
+    TResult Function(RecipesReceived value)? recipesReceived,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,7 +121,7 @@ class _$WatchAllStarted implements WatchAllStarted {
     required TResult Function() watchAllStarted,
     required TResult Function(
             Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)
-        recipeReceived,
+        recipesReceived,
   }) {
     return watchAllStarted();
   }
@@ -131,7 +131,7 @@ class _$WatchAllStarted implements WatchAllStarted {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? watchAllStarted,
     TResult Function(Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)?
-        recipeReceived,
+        recipesReceived,
   }) {
     return watchAllStarted?.call();
   }
@@ -141,7 +141,7 @@ class _$WatchAllStarted implements WatchAllStarted {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? watchAllStarted,
     TResult Function(Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)?
-        recipeReceived,
+        recipesReceived,
     required TResult orElse(),
   }) {
     if (watchAllStarted != null) {
@@ -154,7 +154,7 @@ class _$WatchAllStarted implements WatchAllStarted {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(WatchAllStarted value) watchAllStarted,
-    required TResult Function(RecipeReceived value) recipeReceived,
+    required TResult Function(RecipesReceived value) recipesReceived,
   }) {
     return watchAllStarted(this);
   }
@@ -163,7 +163,7 @@ class _$WatchAllStarted implements WatchAllStarted {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(WatchAllStarted value)? watchAllStarted,
-    TResult Function(RecipeReceived value)? recipeReceived,
+    TResult Function(RecipesReceived value)? recipesReceived,
   }) {
     return watchAllStarted?.call(this);
   }
@@ -172,7 +172,7 @@ class _$WatchAllStarted implements WatchAllStarted {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(WatchAllStarted value)? watchAllStarted,
-    TResult Function(RecipeReceived value)? recipeReceived,
+    TResult Function(RecipesReceived value)? recipesReceived,
     required TResult orElse(),
   }) {
     if (watchAllStarted != null) {
@@ -187,29 +187,29 @@ abstract class WatchAllStarted implements RecipeWatcherEvent {
 }
 
 /// @nodoc
-abstract class $RecipeReceivedCopyWith<$Res> {
-  factory $RecipeReceivedCopyWith(
-          RecipeReceived value, $Res Function(RecipeReceived) then) =
-      _$RecipeReceivedCopyWithImpl<$Res>;
+abstract class $RecipesReceivedCopyWith<$Res> {
+  factory $RecipesReceivedCopyWith(
+          RecipesReceived value, $Res Function(RecipesReceived) then) =
+      _$RecipesReceivedCopyWithImpl<$Res>;
   $Res call({Either<RecipeFailure, KtList<Recipe>> failureOrRecipes});
 }
 
 /// @nodoc
-class _$RecipeReceivedCopyWithImpl<$Res>
+class _$RecipesReceivedCopyWithImpl<$Res>
     extends _$RecipeWatcherEventCopyWithImpl<$Res>
-    implements $RecipeReceivedCopyWith<$Res> {
-  _$RecipeReceivedCopyWithImpl(
-      RecipeReceived _value, $Res Function(RecipeReceived) _then)
-      : super(_value, (v) => _then(v as RecipeReceived));
+    implements $RecipesReceivedCopyWith<$Res> {
+  _$RecipesReceivedCopyWithImpl(
+      RecipesReceived _value, $Res Function(RecipesReceived) _then)
+      : super(_value, (v) => _then(v as RecipesReceived));
 
   @override
-  RecipeReceived get _value => super._value as RecipeReceived;
+  RecipesReceived get _value => super._value as RecipesReceived;
 
   @override
   $Res call({
     Object? failureOrRecipes = freezed,
   }) {
-    return _then(RecipeReceived(
+    return _then(RecipesReceived(
       failureOrRecipes == freezed
           ? _value.failureOrRecipes
           : failureOrRecipes // ignore: cast_nullable_to_non_nullable
@@ -220,22 +220,22 @@ class _$RecipeReceivedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RecipeReceived implements RecipeReceived {
-  const _$RecipeReceived(this.failureOrRecipes);
+class _$RecipesReceived implements RecipesReceived {
+  const _$RecipesReceived(this.failureOrRecipes);
 
   @override
   final Either<RecipeFailure, KtList<Recipe>> failureOrRecipes;
 
   @override
   String toString() {
-    return 'RecipeWatcherEvent.recipeReceived(failureOrRecipes: $failureOrRecipes)';
+    return 'RecipeWatcherEvent.recipesReceived(failureOrRecipes: $failureOrRecipes)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is RecipeReceived &&
+            other is RecipesReceived &&
             const DeepCollectionEquality()
                 .equals(other.failureOrRecipes, failureOrRecipes));
   }
@@ -246,8 +246,8 @@ class _$RecipeReceived implements RecipeReceived {
 
   @JsonKey(ignore: true)
   @override
-  $RecipeReceivedCopyWith<RecipeReceived> get copyWith =>
-      _$RecipeReceivedCopyWithImpl<RecipeReceived>(this, _$identity);
+  $RecipesReceivedCopyWith<RecipesReceived> get copyWith =>
+      _$RecipesReceivedCopyWithImpl<RecipesReceived>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -255,9 +255,9 @@ class _$RecipeReceived implements RecipeReceived {
     required TResult Function() watchAllStarted,
     required TResult Function(
             Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)
-        recipeReceived,
+        recipesReceived,
   }) {
-    return recipeReceived(failureOrRecipes);
+    return recipesReceived(failureOrRecipes);
   }
 
   @override
@@ -265,9 +265,9 @@ class _$RecipeReceived implements RecipeReceived {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? watchAllStarted,
     TResult Function(Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)?
-        recipeReceived,
+        recipesReceived,
   }) {
-    return recipeReceived?.call(failureOrRecipes);
+    return recipesReceived?.call(failureOrRecipes);
   }
 
   @override
@@ -275,11 +275,11 @@ class _$RecipeReceived implements RecipeReceived {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? watchAllStarted,
     TResult Function(Either<RecipeFailure, KtList<Recipe>> failureOrRecipes)?
-        recipeReceived,
+        recipesReceived,
     required TResult orElse(),
   }) {
-    if (recipeReceived != null) {
-      return recipeReceived(failureOrRecipes);
+    if (recipesReceived != null) {
+      return recipesReceived(failureOrRecipes);
     }
     return orElse();
   }
@@ -288,43 +288,43 @@ class _$RecipeReceived implements RecipeReceived {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(WatchAllStarted value) watchAllStarted,
-    required TResult Function(RecipeReceived value) recipeReceived,
+    required TResult Function(RecipesReceived value) recipesReceived,
   }) {
-    return recipeReceived(this);
+    return recipesReceived(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(WatchAllStarted value)? watchAllStarted,
-    TResult Function(RecipeReceived value)? recipeReceived,
+    TResult Function(RecipesReceived value)? recipesReceived,
   }) {
-    return recipeReceived?.call(this);
+    return recipesReceived?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(WatchAllStarted value)? watchAllStarted,
-    TResult Function(RecipeReceived value)? recipeReceived,
+    TResult Function(RecipesReceived value)? recipesReceived,
     required TResult orElse(),
   }) {
-    if (recipeReceived != null) {
-      return recipeReceived(this);
+    if (recipesReceived != null) {
+      return recipesReceived(this);
     }
     return orElse();
   }
 }
 
-abstract class RecipeReceived implements RecipeWatcherEvent {
-  const factory RecipeReceived(
+abstract class RecipesReceived implements RecipeWatcherEvent {
+  const factory RecipesReceived(
           final Either<RecipeFailure, KtList<Recipe>> failureOrRecipes) =
-      _$RecipeReceived;
+      _$RecipesReceived;
 
   Either<RecipeFailure, KtList<Recipe>> get failureOrRecipes =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecipeReceivedCopyWith<RecipeReceived> get copyWith =>
+  $RecipesReceivedCopyWith<RecipesReceived> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

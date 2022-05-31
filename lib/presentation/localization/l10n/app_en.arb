@@ -37,6 +37,14 @@
     "@recipe":{
       "description":"the title of the recipe form page"
     },
+    "recipesFilter": "Recipes Filter",
+    "@recipesFilter":{
+      "description":"the title of the recipes filter page"
+    },
+    "createRecipe": "Create a recipe",
+    "@createRecipe":{
+      "description":"the title of the Create a recipe form page"
+    },
     "editTheRecipe": "Edit the recipe",
     "@editTheRecipe":{
       "description":"the title of the recipe form page when editing the recipe"
@@ -69,6 +77,14 @@
     "@delete":{
       "description":"the showing text on the delete button"
     },
+    "recipesFilterInfoTitle": "Filter your Recipes",
+    "@recipesFilterInfoTitle":{
+      "description":"the showing text in the information tile's title in Recipe filter page,information about the filter"
+    },
+    "recipesFilterInfo": "filter your Recipes depending on the ingedients that you have",
+    "@recipesFilterInfo":{
+      "description":"the showing text in the information tile's subtitle in Recipe filter page,information about the filter"
+    },
     "invalidRecipe": "Invalid recipe {whatIsInvalid}",
     "@invalidRecipe":{
       "description":"the showing text on the Invalid recipe {whatIsInvalid}",
@@ -78,7 +94,7 @@
         }
       }
     },
-    "ingredientsListIsTooShort": "You must have at least {minLength} steps for each recipe",
+    "ingredientsListIsTooShort": "You must have at least {minLength} ingredients for each recipe",
     "@ingredientsListIsTooShort":{
       "description":"the showing text when recipe ingredients list is to short, less then {minLength}",
       "placeholders":{
@@ -114,7 +130,6 @@
         }
       }
     },
-
     "cannotBeEmpty": "Cannot be empty",
     "@cannotBeEmpty":{
       "description":"Cannot be empty text field validators text"

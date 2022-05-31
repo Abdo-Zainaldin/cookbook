@@ -4,7 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../domain/recipes/value_objects.dart';
 
 extension BuildContextX on BuildContext {
-  // sign in page related Strings
+  // sign in page related strings
   String get signInStr => AppLocalizations.of(this)!.signIn;
   String get registerStr => AppLocalizations.of(this)!.register;
   String get emailStr => AppLocalizations.of(this)!.email;
@@ -14,9 +14,10 @@ extension BuildContextX on BuildContext {
   String get invalidPasswordStr =>
       AppLocalizations.of(this)!.invalid(passwordStr);
 
-  // Recipe overview and Recipe Form page related Strings
+  // Recipe overview and Recipe Form page related strings
   String get recipesStr => AppLocalizations.of(this)!.recipes;
   String get recipeStr => AppLocalizations.of(this)!.recipe;
+  String get createRecipeStr => AppLocalizations.of(this)!.createRecipe;
   String get editTheRecipeStr => AppLocalizations.of(this)!.editTheRecipe;
   String get recipeNameStr => AppLocalizations.of(this)!.recipeName;
   String get stepStr => AppLocalizations.of(this)!.step;
@@ -42,6 +43,13 @@ extension BuildContextX on BuildContext {
   String get iNeedHelpStr => AppLocalizations.of(this)!.iNeedHelp;
   String get unexpectedErrorContactSupportStr =>
       AppLocalizations.of(this)!.unexpectedError('\n$contactSupportStr');
+
+  // Recipes filter page related strings
+  String get recipesFilterStr => AppLocalizations.of(this)!.recipesFilter;
+  String get recipesFilterInfoTitleStr =>
+      AppLocalizations.of(this)!.recipesFilterInfoTitle;
+  String get recipesFilterInfoStr =>
+      AppLocalizations.of(this)!.recipesFilterInfo;
 
   // Failure messages
   String get cancelledFailureStr => AppLocalizations.of(this)!.cancelledFailure;

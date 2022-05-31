@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
@@ -20,7 +21,7 @@ class RecipeWatcherBloc extends Bloc<RecipeWatcherEvent, RecipeWatcherState> {
   final IRecipeRepository _recipeRepository;
 
   StreamSubscription<Either<RecipeFailure, KtList<Recipe>>>?
-      _recipeStreamSubscription;
+      recipeStreamSubscription;
 
   RecipeWatcherBloc(
     this._recipeRepository,
@@ -28,14 +29,14 @@ class RecipeWatcherBloc extends Bloc<RecipeWatcherEvent, RecipeWatcherState> {
     on<WatchAllStarted>((event, emit) async {
       emit(const RecipeWatcherState.loadInProgress());
 
-      await _recipeStreamSubscription?.cancel();
+      await recipeStreamSubscription?.cancel();
 
-      _recipeStreamSubscription = _recipeRepository.watchAll().listen(
-            (failureOrRecipes) => add(RecipeReceived(failureOrRecipes)),
+      recipeStreamSubscription = _recipeRepository.watchAll().listen(
+            (failureOrRecipes) => add(RecipesReceived(failureOrRecipes)),
           );
     });
 
-    on<RecipeReceived>((event, emit) {
+    on<RecipesReceived>((event, emit) {
       event.failureOrRecipes.fold(
         (f) => emit(RecipeWatcherState.loadFailure(f)),
         (recipes) => emit(RecipeWatcherState.loadSuccess(recipes)),
@@ -45,7 +46,7 @@ class RecipeWatcherBloc extends Bloc<RecipeWatcherEvent, RecipeWatcherState> {
 
   @override
   Future<void> close() async {
-    await _recipeStreamSubscription?.cancel();
+    await recipeStreamSubscription?.cancel();
     return super.close();
   }
 }
