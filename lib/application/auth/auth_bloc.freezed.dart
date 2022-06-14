@@ -72,22 +72,22 @@ class _$AuthEventCopyWithImpl<$Res> implements $AuthEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $AuthCheckRequestedCopyWith<$Res> {
-  factory $AuthCheckRequestedCopyWith(
-          AuthCheckRequested value, $Res Function(AuthCheckRequested) then) =
-      _$AuthCheckRequestedCopyWithImpl<$Res>;
+abstract class _$$AuthCheckRequestedCopyWith<$Res> {
+  factory _$$AuthCheckRequestedCopyWith(_$AuthCheckRequested value,
+          $Res Function(_$AuthCheckRequested) then) =
+      __$$AuthCheckRequestedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AuthCheckRequestedCopyWithImpl<$Res>
+class __$$AuthCheckRequestedCopyWithImpl<$Res>
     extends _$AuthEventCopyWithImpl<$Res>
-    implements $AuthCheckRequestedCopyWith<$Res> {
-  _$AuthCheckRequestedCopyWithImpl(
-      AuthCheckRequested _value, $Res Function(AuthCheckRequested) _then)
-      : super(_value, (v) => _then(v as AuthCheckRequested));
+    implements _$$AuthCheckRequestedCopyWith<$Res> {
+  __$$AuthCheckRequestedCopyWithImpl(
+      _$AuthCheckRequested _value, $Res Function(_$AuthCheckRequested) _then)
+      : super(_value, (v) => _then(v as _$AuthCheckRequested));
 
   @override
-  AuthCheckRequested get _value => super._value as AuthCheckRequested;
+  _$AuthCheckRequested get _value => super._value as _$AuthCheckRequested;
 }
 
 /// @nodoc
@@ -103,7 +103,7 @@ class _$AuthCheckRequested implements AuthCheckRequested {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AuthCheckRequested);
+        (other.runtimeType == runtimeType && other is _$AuthCheckRequested);
   }
 
   @override
@@ -177,19 +177,19 @@ abstract class AuthCheckRequested implements AuthEvent {
 }
 
 /// @nodoc
-abstract class $SignOutCopyWith<$Res> {
-  factory $SignOutCopyWith(SignOut value, $Res Function(SignOut) then) =
-      _$SignOutCopyWithImpl<$Res>;
+abstract class _$$SignOutCopyWith<$Res> {
+  factory _$$SignOutCopyWith(_$SignOut value, $Res Function(_$SignOut) then) =
+      __$$SignOutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SignOutCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
-    implements $SignOutCopyWith<$Res> {
-  _$SignOutCopyWithImpl(SignOut _value, $Res Function(SignOut) _then)
-      : super(_value, (v) => _then(v as SignOut));
+class __$$SignOutCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
+    implements _$$SignOutCopyWith<$Res> {
+  __$$SignOutCopyWithImpl(_$SignOut _value, $Res Function(_$SignOut) _then)
+      : super(_value, (v) => _then(v as _$SignOut));
 
   @override
-  SignOut get _value => super._value as SignOut;
+  _$SignOut get _value => super._value as _$SignOut;
 }
 
 /// @nodoc
@@ -205,7 +205,7 @@ class _$SignOut implements SignOut {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SignOut);
+        (other.runtimeType == runtimeType && other is _$SignOut);
   }
 
   @override
@@ -342,19 +342,20 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
+class __$$_InitialCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, (v) => _then(v as _$_Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  _$_Initial get _value => super._value as _$_Initial;
 }
 
 /// @nodoc
@@ -370,7 +371,7 @@ class _$_Initial implements _Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initial);
+        (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
   @override
@@ -450,21 +451,21 @@ abstract class _Initial implements AuthState {
 }
 
 /// @nodoc
-abstract class _$AuthenticatedCopyWith<$Res> {
-  factory _$AuthenticatedCopyWith(
-          _Authenticated value, $Res Function(_Authenticated) then) =
-      __$AuthenticatedCopyWithImpl<$Res>;
+abstract class _$$_AuthenticatedCopyWith<$Res> {
+  factory _$$_AuthenticatedCopyWith(
+          _$_Authenticated value, $Res Function(_$_Authenticated) then) =
+      __$$_AuthenticatedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$AuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
-    implements _$AuthenticatedCopyWith<$Res> {
-  __$AuthenticatedCopyWithImpl(
-      _Authenticated _value, $Res Function(_Authenticated) _then)
-      : super(_value, (v) => _then(v as _Authenticated));
+class __$$_AuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
+    implements _$$_AuthenticatedCopyWith<$Res> {
+  __$$_AuthenticatedCopyWithImpl(
+      _$_Authenticated _value, $Res Function(_$_Authenticated) _then)
+      : super(_value, (v) => _then(v as _$_Authenticated));
 
   @override
-  _Authenticated get _value => super._value as _Authenticated;
+  _$_Authenticated get _value => super._value as _$_Authenticated;
 }
 
 /// @nodoc
@@ -480,7 +481,7 @@ class _$_Authenticated implements _Authenticated {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Authenticated);
+        (other.runtimeType == runtimeType && other is _$_Authenticated);
   }
 
   @override
@@ -560,21 +561,22 @@ abstract class _Authenticated implements AuthState {
 }
 
 /// @nodoc
-abstract class _$UnauthenticatedCopyWith<$Res> {
-  factory _$UnauthenticatedCopyWith(
-          _Unauthenticated value, $Res Function(_Unauthenticated) then) =
-      __$UnauthenticatedCopyWithImpl<$Res>;
+abstract class _$$_UnauthenticatedCopyWith<$Res> {
+  factory _$$_UnauthenticatedCopyWith(
+          _$_Unauthenticated value, $Res Function(_$_Unauthenticated) then) =
+      __$$_UnauthenticatedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$UnauthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
-    implements _$UnauthenticatedCopyWith<$Res> {
-  __$UnauthenticatedCopyWithImpl(
-      _Unauthenticated _value, $Res Function(_Unauthenticated) _then)
-      : super(_value, (v) => _then(v as _Unauthenticated));
+class __$$_UnauthenticatedCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res>
+    implements _$$_UnauthenticatedCopyWith<$Res> {
+  __$$_UnauthenticatedCopyWithImpl(
+      _$_Unauthenticated _value, $Res Function(_$_Unauthenticated) _then)
+      : super(_value, (v) => _then(v as _$_Unauthenticated));
 
   @override
-  _Unauthenticated get _value => super._value as _Unauthenticated;
+  _$_Unauthenticated get _value => super._value as _$_Unauthenticated;
 }
 
 /// @nodoc
@@ -590,7 +592,7 @@ class _$_Unauthenticated implements _Unauthenticated {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Unauthenticated);
+        (other.runtimeType == runtimeType && other is _$_Unauthenticated);
   }
 
   @override

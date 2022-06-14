@@ -20,9 +20,7 @@ RecipeDto _$RecipeDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RecipeDto {
-// ignore: invalid_annotation_target
-  @JsonKey(ignore: true)
-  dynamic get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   List<IngredientItemDto> get ingredients => throw _privateConstructorUsedError;
   List<StepItemDto> get steps => throw _privateConstructorUsedError;
@@ -40,7 +38,7 @@ abstract class $RecipeDtoCopyWith<$Res> {
   factory $RecipeDtoCopyWith(RecipeDto value, $Res Function(RecipeDto) then) =
       _$RecipeDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(ignore: true) dynamic id,
+      {String id,
       String name,
       List<IngredientItemDto> ingredients,
       List<StepItemDto> steps,
@@ -67,7 +65,7 @@ class _$RecipeDtoCopyWithImpl<$Res> implements $RecipeDtoCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -89,13 +87,13 @@ class _$RecipeDtoCopyWithImpl<$Res> implements $RecipeDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$RecipeDtoCopyWith<$Res> implements $RecipeDtoCopyWith<$Res> {
-  factory _$RecipeDtoCopyWith(
-          _RecipeDto value, $Res Function(_RecipeDto) then) =
-      __$RecipeDtoCopyWithImpl<$Res>;
+abstract class _$$_RecipeDtoCopyWith<$Res> implements $RecipeDtoCopyWith<$Res> {
+  factory _$$_RecipeDtoCopyWith(
+          _$_RecipeDto value, $Res Function(_$_RecipeDto) then) =
+      __$$_RecipeDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(ignore: true) dynamic id,
+      {String id,
       String name,
       List<IngredientItemDto> ingredients,
       List<StepItemDto> steps,
@@ -103,13 +101,14 @@ abstract class _$RecipeDtoCopyWith<$Res> implements $RecipeDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$RecipeDtoCopyWithImpl<$Res> extends _$RecipeDtoCopyWithImpl<$Res>
-    implements _$RecipeDtoCopyWith<$Res> {
-  __$RecipeDtoCopyWithImpl(_RecipeDto _value, $Res Function(_RecipeDto) _then)
-      : super(_value, (v) => _then(v as _RecipeDto));
+class __$$_RecipeDtoCopyWithImpl<$Res> extends _$RecipeDtoCopyWithImpl<$Res>
+    implements _$$_RecipeDtoCopyWith<$Res> {
+  __$$_RecipeDtoCopyWithImpl(
+      _$_RecipeDto _value, $Res Function(_$_RecipeDto) _then)
+      : super(_value, (v) => _then(v as _$_RecipeDto));
 
   @override
-  _RecipeDto get _value => super._value as _RecipeDto;
+  _$_RecipeDto get _value => super._value as _$_RecipeDto;
 
   @override
   $Res call({
@@ -119,18 +118,21 @@ class __$RecipeDtoCopyWithImpl<$Res> extends _$RecipeDtoCopyWithImpl<$Res>
     Object? steps = freezed,
     Object? serverTimeStamp = freezed,
   }) {
-    return _then(_RecipeDto(
-      id: id == freezed ? _value.id : id,
+    return _then(_$_RecipeDto(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       ingredients: ingredients == freezed
-          ? _value.ingredients
+          ? _value._ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
               as List<IngredientItemDto>,
       steps: steps == freezed
-          ? _value.steps
+          ? _value._steps
           : steps // ignore: cast_nullable_to_non_nullable
               as List<StepItemDto>,
       serverTimeStamp:
@@ -143,7 +145,7 @@ class __$RecipeDtoCopyWithImpl<$Res> extends _$RecipeDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RecipeDto extends _RecipeDto {
   const _$_RecipeDto(
-      {@JsonKey(ignore: true) this.id,
+      {required this.id,
       required this.name,
       required final List<IngredientItemDto> ingredients,
       required final List<StepItemDto> steps,
@@ -155,10 +157,8 @@ class _$_RecipeDto extends _RecipeDto {
   factory _$_RecipeDto.fromJson(Map<String, dynamic> json) =>
       _$$_RecipeDtoFromJson(json);
 
-// ignore: invalid_annotation_target
   @override
-  @JsonKey(ignore: true)
-  final dynamic id;
+  final String id;
   @override
   final String name;
   final List<IngredientItemDto> _ingredients;
@@ -188,12 +188,12 @@ class _$_RecipeDto extends _RecipeDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RecipeDto &&
+            other is _$_RecipeDto &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
-                .equals(other.ingredients, ingredients) &&
-            const DeepCollectionEquality().equals(other.steps, steps) &&
+                .equals(other._ingredients, _ingredients) &&
+            const DeepCollectionEquality().equals(other._steps, _steps) &&
             const DeepCollectionEquality()
                 .equals(other.serverTimeStamp, serverTimeStamp));
   }
@@ -204,14 +204,14 @@ class _$_RecipeDto extends _RecipeDto {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(ingredients),
-      const DeepCollectionEquality().hash(steps),
+      const DeepCollectionEquality().hash(_ingredients),
+      const DeepCollectionEquality().hash(_steps),
       const DeepCollectionEquality().hash(serverTimeStamp));
 
   @JsonKey(ignore: true)
   @override
-  _$RecipeDtoCopyWith<_RecipeDto> get copyWith =>
-      __$RecipeDtoCopyWithImpl<_RecipeDto>(this, _$identity);
+  _$$_RecipeDtoCopyWith<_$_RecipeDto> get copyWith =>
+      __$$_RecipeDtoCopyWithImpl<_$_RecipeDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -221,7 +221,7 @@ class _$_RecipeDto extends _RecipeDto {
 
 abstract class _RecipeDto extends RecipeDto {
   const factory _RecipeDto(
-          {@JsonKey(ignore: true) final dynamic id,
+          {required final String id,
           required final String name,
           required final List<IngredientItemDto> ingredients,
           required final List<StepItemDto> steps,
@@ -232,9 +232,8 @@ abstract class _RecipeDto extends RecipeDto {
   factory _RecipeDto.fromJson(Map<String, dynamic> json) =
       _$_RecipeDto.fromJson;
 
-  @override // ignore: invalid_annotation_target
-  @JsonKey(ignore: true)
-  dynamic get id => throw _privateConstructorUsedError;
+  @override
+  String get id => throw _privateConstructorUsedError;
   @override
   String get name => throw _privateConstructorUsedError;
   @override
@@ -246,7 +245,7 @@ abstract class _RecipeDto extends RecipeDto {
   dynamic get serverTimeStamp => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RecipeDtoCopyWith<_RecipeDto> get copyWith =>
+  _$$_RecipeDtoCopyWith<_$_RecipeDto> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -301,32 +300,32 @@ class _$IngredientItemDtoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IngredientItemDtoCopyWith<$Res>
+abstract class _$$_IngredientItemDtoCopyWith<$Res>
     implements $IngredientItemDtoCopyWith<$Res> {
-  factory _$IngredientItemDtoCopyWith(
-          _IngredientItemDto value, $Res Function(_IngredientItemDto) then) =
-      __$IngredientItemDtoCopyWithImpl<$Res>;
+  factory _$$_IngredientItemDtoCopyWith(_$_IngredientItemDto value,
+          $Res Function(_$_IngredientItemDto) then) =
+      __$$_IngredientItemDtoCopyWithImpl<$Res>;
   @override
   $Res call({String id, String name});
 }
 
 /// @nodoc
-class __$IngredientItemDtoCopyWithImpl<$Res>
+class __$$_IngredientItemDtoCopyWithImpl<$Res>
     extends _$IngredientItemDtoCopyWithImpl<$Res>
-    implements _$IngredientItemDtoCopyWith<$Res> {
-  __$IngredientItemDtoCopyWithImpl(
-      _IngredientItemDto _value, $Res Function(_IngredientItemDto) _then)
-      : super(_value, (v) => _then(v as _IngredientItemDto));
+    implements _$$_IngredientItemDtoCopyWith<$Res> {
+  __$$_IngredientItemDtoCopyWithImpl(
+      _$_IngredientItemDto _value, $Res Function(_$_IngredientItemDto) _then)
+      : super(_value, (v) => _then(v as _$_IngredientItemDto));
 
   @override
-  _IngredientItemDto get _value => super._value as _IngredientItemDto;
+  _$_IngredientItemDto get _value => super._value as _$_IngredientItemDto;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
   }) {
-    return _then(_IngredientItemDto(
+    return _then(_$_IngredientItemDto(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -362,7 +361,7 @@ class _$_IngredientItemDto extends _IngredientItemDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IngredientItemDto &&
+            other is _$_IngredientItemDto &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name));
   }
@@ -376,8 +375,9 @@ class _$_IngredientItemDto extends _IngredientItemDto {
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientItemDtoCopyWith<_IngredientItemDto> get copyWith =>
-      __$IngredientItemDtoCopyWithImpl<_IngredientItemDto>(this, _$identity);
+  _$$_IngredientItemDtoCopyWith<_$_IngredientItemDto> get copyWith =>
+      __$$_IngredientItemDtoCopyWithImpl<_$_IngredientItemDto>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -400,7 +400,7 @@ abstract class _IngredientItemDto extends IngredientItemDto {
   String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientItemDtoCopyWith<_IngredientItemDto> get copyWith =>
+  _$$_IngredientItemDtoCopyWith<_$_IngredientItemDto> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -454,31 +454,31 @@ class _$StepItemDtoCopyWithImpl<$Res> implements $StepItemDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$StepItemDtoCopyWith<$Res>
+abstract class _$$_StepItemDtoCopyWith<$Res>
     implements $StepItemDtoCopyWith<$Res> {
-  factory _$StepItemDtoCopyWith(
-          _StepItemDto value, $Res Function(_StepItemDto) then) =
-      __$StepItemDtoCopyWithImpl<$Res>;
+  factory _$$_StepItemDtoCopyWith(
+          _$_StepItemDto value, $Res Function(_$_StepItemDto) then) =
+      __$$_StepItemDtoCopyWithImpl<$Res>;
   @override
   $Res call({String id, String body});
 }
 
 /// @nodoc
-class __$StepItemDtoCopyWithImpl<$Res> extends _$StepItemDtoCopyWithImpl<$Res>
-    implements _$StepItemDtoCopyWith<$Res> {
-  __$StepItemDtoCopyWithImpl(
-      _StepItemDto _value, $Res Function(_StepItemDto) _then)
-      : super(_value, (v) => _then(v as _StepItemDto));
+class __$$_StepItemDtoCopyWithImpl<$Res> extends _$StepItemDtoCopyWithImpl<$Res>
+    implements _$$_StepItemDtoCopyWith<$Res> {
+  __$$_StepItemDtoCopyWithImpl(
+      _$_StepItemDto _value, $Res Function(_$_StepItemDto) _then)
+      : super(_value, (v) => _then(v as _$_StepItemDto));
 
   @override
-  _StepItemDto get _value => super._value as _StepItemDto;
+  _$_StepItemDto get _value => super._value as _$_StepItemDto;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? body = freezed,
   }) {
-    return _then(_StepItemDto(
+    return _then(_$_StepItemDto(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -513,7 +513,7 @@ class _$_StepItemDto extends _StepItemDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _StepItemDto &&
+            other is _$_StepItemDto &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.body, body));
   }
@@ -527,8 +527,8 @@ class _$_StepItemDto extends _StepItemDto {
 
   @JsonKey(ignore: true)
   @override
-  _$StepItemDtoCopyWith<_StepItemDto> get copyWith =>
-      __$StepItemDtoCopyWithImpl<_StepItemDto>(this, _$identity);
+  _$$_StepItemDtoCopyWith<_$_StepItemDto> get copyWith =>
+      __$$_StepItemDtoCopyWithImpl<_$_StepItemDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -550,6 +550,6 @@ abstract class _StepItemDto extends StepItemDto {
   String get body => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StepItemDtoCopyWith<_StepItemDto> get copyWith =>
+  _$$_StepItemDtoCopyWith<_$_StepItemDto> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -74,9 +74,9 @@ class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
-  factory _$RecipeCopyWith(_Recipe value, $Res Function(_Recipe) then) =
-      __$RecipeCopyWithImpl<$Res>;
+abstract class _$$_RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
+  factory _$$_RecipeCopyWith(_$_Recipe value, $Res Function(_$_Recipe) then) =
+      __$$_RecipeCopyWithImpl<$Res>;
   @override
   $Res call(
       {UniqueId id,
@@ -86,13 +86,13 @@ abstract class _$RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$RecipeCopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
-    implements _$RecipeCopyWith<$Res> {
-  __$RecipeCopyWithImpl(_Recipe _value, $Res Function(_Recipe) _then)
-      : super(_value, (v) => _then(v as _Recipe));
+class __$$_RecipeCopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
+    implements _$$_RecipeCopyWith<$Res> {
+  __$$_RecipeCopyWithImpl(_$_Recipe _value, $Res Function(_$_Recipe) _then)
+      : super(_value, (v) => _then(v as _$_Recipe));
 
   @override
-  _Recipe get _value => super._value as _Recipe;
+  _$_Recipe get _value => super._value as _$_Recipe;
 
   @override
   $Res call({
@@ -101,7 +101,7 @@ class __$RecipeCopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
     Object? ingredients = freezed,
     Object? steps = freezed,
   }) {
-    return _then(_Recipe(
+    return _then(_$_Recipe(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -150,7 +150,7 @@ class _$_Recipe extends _Recipe {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Recipe &&
+            other is _$_Recipe &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
@@ -168,8 +168,8 @@ class _$_Recipe extends _Recipe {
 
   @JsonKey(ignore: true)
   @override
-  _$RecipeCopyWith<_Recipe> get copyWith =>
-      __$RecipeCopyWithImpl<_Recipe>(this, _$identity);
+  _$$_RecipeCopyWith<_$_Recipe> get copyWith =>
+      __$$_RecipeCopyWithImpl<_$_Recipe>(this, _$identity);
 }
 
 abstract class _Recipe extends Recipe {
@@ -191,5 +191,6 @@ abstract class _Recipe extends Recipe {
   ListItem<StepItem> get steps => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RecipeCopyWith<_Recipe> get copyWith => throw _privateConstructorUsedError;
+  _$$_RecipeCopyWith<_$_Recipe> get copyWith =>
+      throw _privateConstructorUsedError;
 }

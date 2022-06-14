@@ -7,6 +7,7 @@ part of 'recipe_dtos.dart';
 // **************************************************************************
 
 _$_RecipeDto _$$_RecipeDtoFromJson(Map<String, dynamic> json) => _$_RecipeDto(
+      id: json['id'] as String,
       name: json['name'] as String,
       ingredients: (json['ingredients'] as List<dynamic>)
           .map((e) => IngredientItemDto.fromJson(e as Map<String, dynamic>))
@@ -19,6 +20,7 @@ _$_RecipeDto _$$_RecipeDtoFromJson(Map<String, dynamic> json) => _$_RecipeDto(
 
 Map<String, dynamic> _$$_RecipeDtoToJson(_$_RecipeDto instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'name': instance.name,
       'ingredients': instance.ingredients.map((e) => e.toJson()).toList(),
       'steps': instance.steps.map((e) => e.toJson()).toList(),

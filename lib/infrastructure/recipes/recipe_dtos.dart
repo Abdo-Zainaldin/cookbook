@@ -16,8 +16,7 @@ abstract class RecipeDto implements _$RecipeDto {
   const RecipeDto._();
 
   const factory RecipeDto({
-    // ignore: invalid_annotation_target
-    @JsonKey(ignore: true) id,
+    required String id,
     required String name,
     required List<IngredientItemDto> ingredients,
     required List<StepItemDto> steps,

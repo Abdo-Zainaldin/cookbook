@@ -58,28 +58,30 @@ class _$StepItemCopyWithImpl<$Res> implements $StepItemCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$StepItemCopyWith<$Res> implements $StepItemCopyWith<$Res> {
-  factory _$StepItemCopyWith(_StepItem value, $Res Function(_StepItem) then) =
-      __$StepItemCopyWithImpl<$Res>;
+abstract class _$$_StepItemCopyWith<$Res> implements $StepItemCopyWith<$Res> {
+  factory _$$_StepItemCopyWith(
+          _$_StepItem value, $Res Function(_$_StepItem) then) =
+      __$$_StepItemCopyWithImpl<$Res>;
   @override
   $Res call({UniqueId id, StepBody body});
 }
 
 /// @nodoc
-class __$StepItemCopyWithImpl<$Res> extends _$StepItemCopyWithImpl<$Res>
-    implements _$StepItemCopyWith<$Res> {
-  __$StepItemCopyWithImpl(_StepItem _value, $Res Function(_StepItem) _then)
-      : super(_value, (v) => _then(v as _StepItem));
+class __$$_StepItemCopyWithImpl<$Res> extends _$StepItemCopyWithImpl<$Res>
+    implements _$$_StepItemCopyWith<$Res> {
+  __$$_StepItemCopyWithImpl(
+      _$_StepItem _value, $Res Function(_$_StepItem) _then)
+      : super(_value, (v) => _then(v as _$_StepItem));
 
   @override
-  _StepItem get _value => super._value as _StepItem;
+  _$_StepItem get _value => super._value as _$_StepItem;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? body = freezed,
   }) {
-    return _then(_StepItem(
+    return _then(_$_StepItem(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -111,7 +113,7 @@ class _$_StepItem extends _StepItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _StepItem &&
+            other is _$_StepItem &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.body, body));
   }
@@ -124,8 +126,8 @@ class _$_StepItem extends _StepItem {
 
   @JsonKey(ignore: true)
   @override
-  _$StepItemCopyWith<_StepItem> get copyWith =>
-      __$StepItemCopyWithImpl<_StepItem>(this, _$identity);
+  _$$_StepItemCopyWith<_$_StepItem> get copyWith =>
+      __$$_StepItemCopyWithImpl<_$_StepItem>(this, _$identity);
 }
 
 abstract class _StepItem extends StepItem {
@@ -139,6 +141,6 @@ abstract class _StepItem extends StepItem {
   StepBody get body => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StepItemCopyWith<_StepItem> get copyWith =>
+  _$$_StepItemCopyWith<_$_StepItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

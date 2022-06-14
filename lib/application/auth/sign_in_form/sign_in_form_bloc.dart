@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cookbook_app/domain/auth/i_auth_facade.dart';
 import 'package:cookbook_app/domain/auth/value_objectes.dart';
 import 'package:dartz/dartz.dart';

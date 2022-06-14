@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../application/auth/auth_bloc.dart';
 import '../../../application/auth/sign_in_form/sign_in_form_bloc.dart';
-import '../../../presentation/localization/l10n/localization_helper.dart';
+import '../../core/localization/localization_helper.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class SignInForm extends StatelessWidget {
               ),
             ).show(context),
             (_) {
-              context.router.replace(const RecipeOverviewPageWraperRoute(
+              context.router.replace(const RecipePagesWraperRoute(
                   children: [RecipesOverviewPageRoute()]));
               context
                   .read<AuthBloc>()

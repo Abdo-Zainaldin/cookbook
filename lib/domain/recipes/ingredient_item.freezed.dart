@@ -60,32 +60,32 @@ class _$IngredientItemCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IngredientItemCopyWith<$Res>
+abstract class _$$_IngredientItemCopyWith<$Res>
     implements $IngredientItemCopyWith<$Res> {
-  factory _$IngredientItemCopyWith(
-          _IngredientItem value, $Res Function(_IngredientItem) then) =
-      __$IngredientItemCopyWithImpl<$Res>;
+  factory _$$_IngredientItemCopyWith(
+          _$_IngredientItem value, $Res Function(_$_IngredientItem) then) =
+      __$$_IngredientItemCopyWithImpl<$Res>;
   @override
   $Res call({UniqueId id, IngredientName name});
 }
 
 /// @nodoc
-class __$IngredientItemCopyWithImpl<$Res>
+class __$$_IngredientItemCopyWithImpl<$Res>
     extends _$IngredientItemCopyWithImpl<$Res>
-    implements _$IngredientItemCopyWith<$Res> {
-  __$IngredientItemCopyWithImpl(
-      _IngredientItem _value, $Res Function(_IngredientItem) _then)
-      : super(_value, (v) => _then(v as _IngredientItem));
+    implements _$$_IngredientItemCopyWith<$Res> {
+  __$$_IngredientItemCopyWithImpl(
+      _$_IngredientItem _value, $Res Function(_$_IngredientItem) _then)
+      : super(_value, (v) => _then(v as _$_IngredientItem));
 
   @override
-  _IngredientItem get _value => super._value as _IngredientItem;
+  _$_IngredientItem get _value => super._value as _$_IngredientItem;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
   }) {
-    return _then(_IngredientItem(
+    return _then(_$_IngredientItem(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -117,7 +117,7 @@ class _$_IngredientItem extends _IngredientItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IngredientItem &&
+            other is _$_IngredientItem &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name));
   }
@@ -130,8 +130,8 @@ class _$_IngredientItem extends _IngredientItem {
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientItemCopyWith<_IngredientItem> get copyWith =>
-      __$IngredientItemCopyWithImpl<_IngredientItem>(this, _$identity);
+  _$$_IngredientItemCopyWith<_$_IngredientItem> get copyWith =>
+      __$$_IngredientItemCopyWithImpl<_$_IngredientItem>(this, _$identity);
 }
 
 abstract class _IngredientItem extends IngredientItem {
@@ -146,6 +146,6 @@ abstract class _IngredientItem extends IngredientItem {
   IngredientName get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientItemCopyWith<_IngredientItem> get copyWith =>
+  _$$_IngredientItemCopyWith<_$_IngredientItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

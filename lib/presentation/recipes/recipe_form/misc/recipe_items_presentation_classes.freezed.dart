@@ -60,33 +60,33 @@ class _$IngredientItemPrimitiveCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IngredientItemPrimitiveCopyWith<$Res>
+abstract class _$$_IngredientItemPrimitiveCopyWith<$Res>
     implements $IngredientItemPrimitiveCopyWith<$Res> {
-  factory _$IngredientItemPrimitiveCopyWith(_IngredientItemPrimitive value,
-          $Res Function(_IngredientItemPrimitive) then) =
-      __$IngredientItemPrimitiveCopyWithImpl<$Res>;
+  factory _$$_IngredientItemPrimitiveCopyWith(_$_IngredientItemPrimitive value,
+          $Res Function(_$_IngredientItemPrimitive) then) =
+      __$$_IngredientItemPrimitiveCopyWithImpl<$Res>;
   @override
   $Res call({UniqueId id, String name});
 }
 
 /// @nodoc
-class __$IngredientItemPrimitiveCopyWithImpl<$Res>
+class __$$_IngredientItemPrimitiveCopyWithImpl<$Res>
     extends _$IngredientItemPrimitiveCopyWithImpl<$Res>
-    implements _$IngredientItemPrimitiveCopyWith<$Res> {
-  __$IngredientItemPrimitiveCopyWithImpl(_IngredientItemPrimitive _value,
-      $Res Function(_IngredientItemPrimitive) _then)
-      : super(_value, (v) => _then(v as _IngredientItemPrimitive));
+    implements _$$_IngredientItemPrimitiveCopyWith<$Res> {
+  __$$_IngredientItemPrimitiveCopyWithImpl(_$_IngredientItemPrimitive _value,
+      $Res Function(_$_IngredientItemPrimitive) _then)
+      : super(_value, (v) => _then(v as _$_IngredientItemPrimitive));
 
   @override
-  _IngredientItemPrimitive get _value =>
-      super._value as _IngredientItemPrimitive;
+  _$_IngredientItemPrimitive get _value =>
+      super._value as _$_IngredientItemPrimitive;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
   }) {
-    return _then(_IngredientItemPrimitive(
+    return _then(_$_IngredientItemPrimitive(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -129,7 +129,7 @@ class _$_IngredientItemPrimitive extends _IngredientItemPrimitive
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IngredientItemPrimitive &&
+            other is _$_IngredientItemPrimitive &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name));
   }
@@ -142,9 +142,10 @@ class _$_IngredientItemPrimitive extends _IngredientItemPrimitive
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientItemPrimitiveCopyWith<_IngredientItemPrimitive> get copyWith =>
-      __$IngredientItemPrimitiveCopyWithImpl<_IngredientItemPrimitive>(
-          this, _$identity);
+  _$$_IngredientItemPrimitiveCopyWith<_$_IngredientItemPrimitive>
+      get copyWith =>
+          __$$_IngredientItemPrimitiveCopyWithImpl<_$_IngredientItemPrimitive>(
+              this, _$identity);
 }
 
 abstract class _IngredientItemPrimitive extends IngredientItemPrimitive {
@@ -159,8 +160,8 @@ abstract class _IngredientItemPrimitive extends IngredientItemPrimitive {
   String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientItemPrimitiveCopyWith<_IngredientItemPrimitive> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_IngredientItemPrimitiveCopyWith<_$_IngredientItemPrimitive>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -209,32 +210,32 @@ class _$StepItemPrimitiveCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$StepItemPrimitiveCopyWith<$Res>
+abstract class _$$_StepItemPrimitiveCopyWith<$Res>
     implements $StepItemPrimitiveCopyWith<$Res> {
-  factory _$StepItemPrimitiveCopyWith(
-          _StepItemPrimitive value, $Res Function(_StepItemPrimitive) then) =
-      __$StepItemPrimitiveCopyWithImpl<$Res>;
+  factory _$$_StepItemPrimitiveCopyWith(_$_StepItemPrimitive value,
+          $Res Function(_$_StepItemPrimitive) then) =
+      __$$_StepItemPrimitiveCopyWithImpl<$Res>;
   @override
   $Res call({UniqueId id, String body});
 }
 
 /// @nodoc
-class __$StepItemPrimitiveCopyWithImpl<$Res>
+class __$$_StepItemPrimitiveCopyWithImpl<$Res>
     extends _$StepItemPrimitiveCopyWithImpl<$Res>
-    implements _$StepItemPrimitiveCopyWith<$Res> {
-  __$StepItemPrimitiveCopyWithImpl(
-      _StepItemPrimitive _value, $Res Function(_StepItemPrimitive) _then)
-      : super(_value, (v) => _then(v as _StepItemPrimitive));
+    implements _$$_StepItemPrimitiveCopyWith<$Res> {
+  __$$_StepItemPrimitiveCopyWithImpl(
+      _$_StepItemPrimitive _value, $Res Function(_$_StepItemPrimitive) _then)
+      : super(_value, (v) => _then(v as _$_StepItemPrimitive));
 
   @override
-  _StepItemPrimitive get _value => super._value as _StepItemPrimitive;
+  _$_StepItemPrimitive get _value => super._value as _$_StepItemPrimitive;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? body = freezed,
   }) {
-    return _then(_StepItemPrimitive(
+    return _then(_$_StepItemPrimitive(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -277,7 +278,7 @@ class _$_StepItemPrimitive extends _StepItemPrimitive
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _StepItemPrimitive &&
+            other is _$_StepItemPrimitive &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.body, body));
   }
@@ -290,8 +291,9 @@ class _$_StepItemPrimitive extends _StepItemPrimitive
 
   @JsonKey(ignore: true)
   @override
-  _$StepItemPrimitiveCopyWith<_StepItemPrimitive> get copyWith =>
-      __$StepItemPrimitiveCopyWithImpl<_StepItemPrimitive>(this, _$identity);
+  _$$_StepItemPrimitiveCopyWith<_$_StepItemPrimitive> get copyWith =>
+      __$$_StepItemPrimitiveCopyWithImpl<_$_StepItemPrimitive>(
+          this, _$identity);
 }
 
 abstract class _StepItemPrimitive extends StepItemPrimitive {
@@ -306,6 +308,6 @@ abstract class _StepItemPrimitive extends StepItemPrimitive {
   String get body => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StepItemPrimitiveCopyWith<_StepItemPrimitive> get copyWith =>
+  _$$_StepItemPrimitiveCopyWith<_$_StepItemPrimitive> get copyWith =>
       throw _privateConstructorUsedError;
 }

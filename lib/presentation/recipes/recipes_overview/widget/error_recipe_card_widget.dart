@@ -1,4 +1,4 @@
-import 'package:cookbook_app/presentation/localization/l10n/localization_helper.dart';
+import 'package:cookbook_app/presentation/core/localization/localization_helper.dart';
 import 'package:flutter/material.dart';
 
 import 'package:cookbook_app/domain/recipes/recipe.dart';

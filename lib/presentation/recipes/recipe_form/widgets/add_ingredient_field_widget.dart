@@ -1,13 +1,13 @@
 import 'package:cookbook_app/domain/core/value_objects.dart';
 import 'package:cookbook_app/domain/recipes/value_objects.dart';
-import 'package:cookbook_app/presentation/localization/l10n/localization_helper.dart';
+import 'package:cookbook_app/presentation/core/localization/localization_helper.dart';
 import 'package:cookbook_app/presentation/recipes/recipe_form/misc/build_context_x.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:kt_dart/kt.dart';
 
-import '../../../../../application/recipe_form/recipe_form_bloc.dart';
+import '../../../../../application/recipe/recipe_form/recipe_form_bloc.dart';
 import '../misc/recipe_items_presentation_classes.dart';
 
 class AddIngredientField extends HookWidget {
@@ -18,12 +18,13 @@ class AddIngredientField extends HookWidget {
     final toggleShowValidators = useState(false);
 
     final textEditingController = useTextEditingController();
-    if (!toggleShowValidators.value) textEditingController.text = '';
+    textEditingController.text = '';
 
     return BlocConsumer<RecipeFormBloc, RecipeFormState>(
       listenWhen: (previous, current) =>
           previous.isEditing != current.isEditing,
       listener: (context, state) {
+        // add initial ingredients to context.formIngredients
         context.formIngredients = state.recipe.ingredients.value.fold(
           (_) => listOf<IngredientItemPrimitive>(),
           (ingredientItemList) => ingredientItemList
@@ -46,7 +47,7 @@ class AddIngredientField extends HookWidget {
                     labelText: context.addIngredientStr,
                     counterText: '',
                     suffixIcon: IconButton(
-                      onPressed: () => _addIngredient(
+                      onPressed: () => addIngredient(
                         context,
                         textEditingController.text,
                         toggleShowValidators,
@@ -54,12 +55,11 @@ class AddIngredientField extends HookWidget {
                       icon: const Icon(Icons.add),
                     ),
                   ),
-                  onFieldSubmitted: (_) => _addIngredient(
+                  onFieldSubmitted: (_) => addIngredient(
                     context,
                     textEditingController.text,
                     toggleShowValidators,
                   ),
-                  onChanged: (_) {},
                   autovalidateMode: toggleShowValidators.value
                       ? AutovalidateMode.always
                       : AutovalidateMode.disabled,
@@ -85,7 +85,7 @@ class AddIngredientField extends HookWidget {
     );
   }
 
-  void _addIngredient(
+  void addIngredient(
     BuildContext context,
     String ingredientName,
     ValueNotifier toggleShowValidators,
@@ -105,6 +105,7 @@ class AddIngredientField extends HookWidget {
         context
             .read<RecipeFormBloc>()
             .add(RecipeFormEvent.ingredientsChanged(context.formIngredients));
+
         toggleShowValidators.value = false;
       },
     );

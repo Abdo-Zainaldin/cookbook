@@ -1,0 +1,278 @@
+{
+    "email": "Email",
+    "@email": {
+        "description": "the showing text within the email text field"
+    },
+    "password": "Password",
+    "@password": {
+        "description": "the showing text within the password text field"
+    },
+    "signIn": "Sign In",
+    "@signIn": {
+        "description": "the title of the sign-in page and the showing text on the sign-in button"
+    },
+    "register": "Register",
+    "@register": {
+        "description": "the showing text on the register button"
+    },
+    "signInWithGoogle": "Login with Google",
+    "@signInWithGoogle": {
+        "description": "the showing text on the Login with Google button"
+    },
+    "invalid": "Invalid {whatIsInvalid}",
+    "@invalid": {
+        "description": "the showing text wehen the user write Invalid {whatIsInvalid} input",
+        "placeholders": {
+            "whatIsInvalid": {
+                "type": "String"
+            }
+        }
+    },
+    "recipes": "Recipes",
+    "@recipes": {
+        "description": "the title of the recipes page"
+    },
+    "recipe": "Recipe",
+    "@recipe": {
+        "description": "the title of the recipe form page"
+    },
+    "recipesFilter": "Recipes Filter",
+    "@recipesFilter": {
+        "description": "the title of the recipes filter page"
+    },
+    "createRecipe": "Create a recipe",
+    "@createRecipe": {
+        "description": "the title of the Create a recipe form page"
+    },
+    "editTheRecipe": "Edit the recipe",
+    "@editTheRecipe": {
+        "description": "the title of the recipe form page when editing the recipe"
+    },
+    "recipeName": "Recipe Name",
+    "@recipeName": {
+        "description": "the showing text in Recipe Name text field"
+    },
+    "emptyRecipesOverViewPage": "Add Recipes to see them here",
+    "@emptyRecipesOverViewPage": {
+        "description": "the showing text when the recipes overview page is empty Add Recipes to see them here"
+    },
+    "settings": "Settings",
+    "@settings": {
+        "description": "the title of the settings page"
+    },
+    "local": "local",
+    "@local": {
+        "description": "local storge text"
+    },
+    "cloud": "cloud",
+    "@cloud": {
+        "description": "cloud storge text"
+    },
+    "saving": "Saving",
+    "@saving": {
+        "description": "the showing text when the recipe is saved"
+    },
+    "step": "Step",
+    "@step": {
+        "description": "the showing text in the step text field"
+    },
+    "addStep": "add a step",
+    "@addStep": {
+        "description": "the showing text on the add a step button"
+    },
+    "addIngredient": "add an ingredient",
+    "@addIngredient": {
+        "description": "the showing text in add an ingredient text field"
+    },
+    "selectedRecipe": "Selected recipe",
+    "@selectedRecipe": {
+        "description": "the title of the delete recipe dialog"
+    },
+    "cancel": "Cancel",
+    "@cancel": {
+        "description": "the showing text on the cancel button"
+    },
+    "accept": "Accept",
+    "@accept": {
+        "description": "the showing text on the accept button"
+    },
+    "delete": "Delete",
+    "@delete": {
+        "description": "the showing text on the delete button"
+    },
+    "edit": "Edit",
+    "@edit": {
+        "description": "the showing text on the Edit button"
+    },
+    "copy": "Copy",
+    "@copy": {
+        "description": "the showing text on the Copy button"
+    },
+    "liveCooking": "Live Cooking",
+    "@liveCooking": {
+        "description": "the showing text on the Live Cooking button liveCooking is a feature that simulates live cooking for example adding check boxes next to a recipe's steps"
+    },
+    "areYouSure": "Are you sure",
+    "@areYouSure": {
+        "description": "the showing in the title of an alert dialog "
+    },
+    "recipesFilterInfoTitle": "Filter your Recipes",
+    "@recipesFilterInfoTitle": {
+        "description": "the showing text in the information tile's title in Recipe filter page, information about the filter"
+    },
+    "recipesFilterInfo": "filter your Recipes depending on the ingredients that you have",
+    "@recipesFilterInfo": {
+        "description": "the showing text in the information tile's subtitle in Recipe filter page, information about the filter"
+    },
+    "language": "language",
+    "@language": {
+        "description": "the showing in the settings page on the settings language section"
+    },
+    "defult": "default",
+    "@defult": {
+        "description": "the showing in the settings page on the settings language section when the user selects the device default language"
+    },
+    "font": "font",
+    "@font": {
+        "description": "the showing in the settings page on the font section"
+    },
+    "saveRecipesToCloud": "Save all your recipes on the cloud",
+    "@saveRecipesToCloud": {
+        "description": "the showing text on the Save all your recipes on the cloud tile title, information about the switch"
+    },
+    "saveRecipesToCloudActionInformation": "Some of the recipes that you have previously uploaded will be replaced with the local storge version of it",
+    "@saveRecipesToCloudActionInformation": {
+        "description": "the showing text in the Some of the recipes that you have previously uploaded will be replaced with the local storge version of it, information about the action"
+    },
+    "youAreUsingLocalCloudStoregeSwitch": "You are corrently using {storge} storge",
+    "@youAreUsingLocalCloudStoregeSwitch": {
+        "description": "the showing text on the You are currently using {storge} storge tile subtitle, information about the switch",
+        "placeholders": {
+            "storge": {
+                "type": "String"
+            }
+        }
+    },
+    "uploadLocalStoredRecipesToCloud": "Upload local stored recipes to the cloud",
+    "@uploadLocalStoredRecipesToCloud": {
+        "description": "the showing text on the upload locally stored recipes to the cloud button, information about the feature"
+    },
+    "invalidRecipe": "Invalid recipe {whatIsInvalid}",
+    "@invalidRecipe": {
+        "description": "the showing text on the Invalid recipe {whatIsInvalid}",
+        "placeholders": {
+            "whatIsInvalid": {
+                "type": "String"
+            }
+        }
+    },
+    "ingredientsListIsTooShort": "You must have at least {minLength} ingredients for each recipe",
+    "@ingredientsListIsTooShort": {
+        "description": "the showing text when recipe ingredients list is to short, less then {minLength}",
+        "placeholders": {
+            "minLength": {
+                "type": "int"
+            }
+        }
+    },
+    "ingredientsListIsTooLong": "You can only add {maxLength} steps for each recipe",
+    "@ingredientsListIsTooLong": {
+        "description": "the showing text when recipe ingredients list is too long, more than {maxLength}",
+        "placeholders": {
+            "maxLength": {
+                "type": "int"
+            }
+        }
+    },
+    "stepsListIsTooShort": "You must have at least {minLength} steps for each recipe",
+    "@stepsListIsTooShort": {
+        "description": "the showing text when recipe steps list is too short, less than {minLength}",
+        "placeholders": {
+            "minLength": {
+                "type": "int"
+            }
+        }
+    },
+    "stepsListIsTooLong": "You can only add {maxLength} steps for each recipe",
+    "@stepsListIsTooLong": {
+        "description": "the showing text when recipe steps list is too long, more than {maxLength}",
+        "placeholders": {
+            "maxLength": {
+                "type": "int"
+            }
+        }
+    },
+    "cannotBeEmpty": "Cannot be empty",
+    "@cannotBeEmpty": {
+        "description": "Cannot be empty text field validators text"
+    },
+    "exceedingLength": "Too long",
+    "@exceedingLength": {
+        "description": "Too long text field validators text"
+    },
+    "multiline": "Has to be in a single line",
+    "@multiline": {
+        "description": "Has to be in a single line text field validators text"
+    },
+    "detailsForNerds": "Details for nerds:",
+    "@detailsForNerds": {
+        "description": "the showing text on the Invalid recipe"
+    },
+    "iNeedHelp": "I NEED HELP",
+    "@iNeedHelp": {
+        "description": "the showing text on the I NEED HELP button"
+    },
+    "unexpectedError": "Unexpected error {someText}",
+    "@unexpectedError": {
+        "description": "the showing text thir is Unexpected error while processing something {someText}",
+        "placeholders": {
+            "someText": {
+                "type": "String"
+            }
+        }
+    },
+    "cancelledFailure": "Cancelled",
+    "@cancelledFailure": {
+        "description": "cancelled failure message"
+    },
+    "serverErrorFailure": "Server error",
+    "@serverErrorFailure": {
+        "description": "Server error failure message"
+    },
+    "emailAlreadyInUseFailure": "Email already in use",
+    "@emailAlreadyInUseFailure": {
+        "description": "Email already in use failure message"
+    },
+    "invalidEmailAndPasswordCombinationFailure": "Invalid email and password combination",
+    "@invalidEmailAndPasswordCombinationFailure": {
+        "description": "Invalid email and password failure message"
+    },
+    "initSettingsFailure": "Unexpected error occurred while initializing the Settings,",
+    "@initSettingsFailure": {
+        "description": "Unexpected error occurred while initializing the Settings, failure message"
+    },
+    "unexpectedErrorOccuredWhileDeleting": "Unexpected error occurred while deleting,",
+    "@unexpectedErrorOccuredWhileDeleting": {
+        "description": "Unexpected error occurred while deleting, failure message"
+    },
+    "unableToUpdate": "Couldn't update the recipe. Was it deleted from another device?",
+    "@unableToUpdate": {
+        "description": "Couldn't update the recipe. Was it deleted from another device? failure message"
+    },
+    "unableToUploadRecipes": "Unable to upload recipes",
+    "@unableToUploadRecipes": {
+        "description": "Unable to upload recipes failure message"
+    },
+    "insufficientPermission": "Insufficient permissions",
+    "@insufficientPermission": {
+        "description": "Insufficient permissions message"
+    },
+    "impossibleError": "Impossible error",
+    "@impossibleError": {
+        "description": "Impossible error failure message"
+    },
+    "contactSupport": "please contact support.",
+    "@contactSupport": {
+        "description": "please contact support. message"
+    }
+}

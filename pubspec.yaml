@@ -27,41 +27,44 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  another_flushbar: ^1.10.28
-  auto_route: ^3.2.4
-  cloud_firestore: ^3.1.14
-  cupertino_icons: ^1.0.2
+  another_flushbar: ^1.10.29
+  auto_route: ^4.0.1
+  cloud_firestore: ^3.1.17
+  cupertino_icons: ^1.0.5
   dartz: ^0.10.1
-  firebase_auth: ^3.3.17
-  firebase_core: ^1.16.0
+  firebase_auth: ^3.3.19
+  firebase_core: ^1.17.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
-  flutter_hooks: ^0.18.3
+  flutter_hooks: ^0.18.4
   flutter_localizations:
     sdk: flutter
-  flutter_slidable: ^1.2.1
-  freezed_annotation: ^2.0.1
+  flutter_slidable: ^1.3.0
+  flutter_speed_dial: ^6.0.0
+  freezed_annotation: ^2.0.3
   get_it: ^7.2.0
-  google_sign_in: ^5.3.0
+  google_fonts: ^3.0.1
+  google_sign_in: ^5.3.2
   hive: ^2.2.1
   hive_flutter: ^1.1.0
   injectable: ^1.5.3
   intl: ^0.17.0
   json_annotation: ^4.5.0
   kt_dart: ^0.10.0
-  provider: ^6.0.2
+  listenable_stream: ^1.1.0
+  provider: ^6.0.3
   reorderables: ^0.5.0
-  rxdart: ^0.27.3
+  rxdart: ^0.27.4
   uuid: ^3.0.6
-
+  
 dev_dependencies:
-  auto_route_generator: ^3.2.3
+  auto_route_generator: ^4.0.0
   build_runner: null
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
-  freezed: ^2.0.2
+  freezed: ^2.0.3+1
   hive_generator: ^1.1.3
   injectable_generator: ^1.5.3
   json_serializable: ^6.2.0

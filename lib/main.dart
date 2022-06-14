@@ -9,7 +9,7 @@ import 'presentation/core/app_widget.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   configureInjection(Environment.prod);
-  // await Hive.initFlutter();
+  await Hive.initFlutter();
   await Firebase.initializeApp();
   runApp(AppWidget());
 }

@@ -31,7 +31,7 @@ abstract class Recipe with _$Recipe {
         .andThen(ingredients.filureOrUnit)
         .andThen(ingredients.value.fold(
           (f) => left(f),
-          (_ingredients) => _ingredients
+          (ingredients) => ingredients
               .map((ingredientItem) => ingredientItem.failureOption)
               .filter((o) => o.isSome())
               // If we can't get the 0th element, the list is empty. In such a case, it's valid.
@@ -41,7 +41,7 @@ abstract class Recipe with _$Recipe {
         .andThen(steps.filureOrUnit)
         .andThen(steps.value.fold(
           (f) => left(f),
-          (_steps) => _steps
+          (steps) => steps
               .map((stepItem) => stepItem.failureOption)
               .filter((o) => o.isSome())
               // If we can't get the 0th element, the list is empty. In such a case, it's valid.

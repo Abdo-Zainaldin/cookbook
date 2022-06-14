@@ -1,4 +1,6 @@
-import 'package:cookbook_app/presentation/localization/l10n/localization_helper.dart';
+import 'dart:developer';
+
+import 'package:cookbook_app/presentation/core/localization/localization_helper.dart';
 import 'package:flutter/material.dart';
 
 import 'package:cookbook_app/domain/recipes/recipe_failure.dart';
@@ -29,10 +31,10 @@ class CriticalFilureDisplay extends StatelessWidget {
           ),
           textAlign: TextAlign.center,
         ),
+        // this is fake button
         TextButton.icon(
           onPressed: () {
-            // ignore: avoid_print
-            print('Sending email!');
+            log('Sending email!');
           },
           icon: const Icon(Icons.mail),
           label: Text(context.iNeedHelpStr),

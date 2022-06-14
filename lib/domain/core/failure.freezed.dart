@@ -122,31 +122,31 @@ class _$ValueFailureCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-abstract class $InvalidEmailCopyWith<T, $Res>
+abstract class _$$InvalidEmailCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $InvalidEmailCopyWith(
-          InvalidEmail<T> value, $Res Function(InvalidEmail<T>) then) =
-      _$InvalidEmailCopyWithImpl<T, $Res>;
+  factory _$$InvalidEmailCopyWith(
+          _$InvalidEmail<T> value, $Res Function(_$InvalidEmail<T>) then) =
+      __$$InvalidEmailCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidEmailCopyWithImpl<T, $Res>
+class __$$InvalidEmailCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidEmailCopyWith<T, $Res> {
-  _$InvalidEmailCopyWithImpl(
-      InvalidEmail<T> _value, $Res Function(InvalidEmail<T>) _then)
-      : super(_value, (v) => _then(v as InvalidEmail<T>));
+    implements _$$InvalidEmailCopyWith<T, $Res> {
+  __$$InvalidEmailCopyWithImpl(
+      _$InvalidEmail<T> _value, $Res Function(_$InvalidEmail<T>) _then)
+      : super(_value, (v) => _then(v as _$InvalidEmail<T>));
 
   @override
-  InvalidEmail<T> get _value => super._value as InvalidEmail<T>;
+  _$InvalidEmail<T> get _value => super._value as _$InvalidEmail<T>;
 
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(InvalidEmail<T>(
+    return _then(_$InvalidEmail<T>(
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -172,7 +172,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidEmail<T> &&
+            other is _$InvalidEmail<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -183,8 +183,8 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
-      _$InvalidEmailCopyWithImpl<T, InvalidEmail<T>>(this, _$identity);
+  _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
+      __$$InvalidEmailCopyWithImpl<T, _$InvalidEmail<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -287,36 +287,36 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   T get failedValue => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
+  _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidPasswordCopyWith<T, $Res>
+abstract class _$$InvalidPasswordCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $InvalidPasswordCopyWith(
-          InvalidPassword<T> value, $Res Function(InvalidPassword<T>) then) =
-      _$InvalidPasswordCopyWithImpl<T, $Res>;
+  factory _$$InvalidPasswordCopyWith(_$InvalidPassword<T> value,
+          $Res Function(_$InvalidPassword<T>) then) =
+      __$$InvalidPasswordCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$InvalidPasswordCopyWithImpl<T, $Res>
+class __$$InvalidPasswordCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidPasswordCopyWith<T, $Res> {
-  _$InvalidPasswordCopyWithImpl(
-      InvalidPassword<T> _value, $Res Function(InvalidPassword<T>) _then)
-      : super(_value, (v) => _then(v as InvalidPassword<T>));
+    implements _$$InvalidPasswordCopyWith<T, $Res> {
+  __$$InvalidPasswordCopyWithImpl(
+      _$InvalidPassword<T> _value, $Res Function(_$InvalidPassword<T>) _then)
+      : super(_value, (v) => _then(v as _$InvalidPassword<T>));
 
   @override
-  InvalidPassword<T> get _value => super._value as InvalidPassword<T>;
+  _$InvalidPassword<T> get _value => super._value as _$InvalidPassword<T>;
 
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(InvalidPassword<T>(
+    return _then(_$InvalidPassword<T>(
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -342,7 +342,7 @@ class _$InvalidPassword<T> implements InvalidPassword<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidPassword<T> &&
+            other is _$InvalidPassword<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -353,8 +353,9 @@ class _$InvalidPassword<T> implements InvalidPassword<T> {
 
   @JsonKey(ignore: true)
   @override
-  $InvalidPasswordCopyWith<T, InvalidPassword<T>> get copyWith =>
-      _$InvalidPasswordCopyWithImpl<T, InvalidPassword<T>>(this, _$identity);
+  _$$InvalidPasswordCopyWith<T, _$InvalidPassword<T>> get copyWith =>
+      __$$InvalidPasswordCopyWithImpl<T, _$InvalidPassword<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -457,33 +458,33 @@ abstract class InvalidPassword<T> implements ValueFailure<T> {
   T get failedValue => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $InvalidPasswordCopyWith<T, InvalidPassword<T>> get copyWith =>
+  _$$InvalidPasswordCopyWith<T, _$InvalidPassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmptyCopyWith<T, $Res>
+abstract class _$$EmptyCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $EmptyCopyWith(Empty<T> value, $Res Function(Empty<T>) then) =
-      _$EmptyCopyWithImpl<T, $Res>;
+  factory _$$EmptyCopyWith(_$Empty<T> value, $Res Function(_$Empty<T>) then) =
+      __$$EmptyCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$EmptyCopyWithImpl<T, $Res> extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $EmptyCopyWith<T, $Res> {
-  _$EmptyCopyWithImpl(Empty<T> _value, $Res Function(Empty<T>) _then)
-      : super(_value, (v) => _then(v as Empty<T>));
+class __$$EmptyCopyWithImpl<T, $Res> extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements _$$EmptyCopyWith<T, $Res> {
+  __$$EmptyCopyWithImpl(_$Empty<T> _value, $Res Function(_$Empty<T>) _then)
+      : super(_value, (v) => _then(v as _$Empty<T>));
 
   @override
-  Empty<T> get _value => super._value as Empty<T>;
+  _$Empty<T> get _value => super._value as _$Empty<T>;
 
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(Empty<T>(
+    return _then(_$Empty<T>(
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -509,7 +510,7 @@ class _$Empty<T> implements Empty<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Empty<T> &&
+            other is _$Empty<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -520,8 +521,8 @@ class _$Empty<T> implements Empty<T> {
 
   @JsonKey(ignore: true)
   @override
-  $EmptyCopyWith<T, Empty<T>> get copyWith =>
-      _$EmptyCopyWithImpl<T, Empty<T>>(this, _$identity);
+  _$$EmptyCopyWith<T, _$Empty<T>> get copyWith =>
+      __$$EmptyCopyWithImpl<T, _$Empty<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -623,37 +624,37 @@ abstract class Empty<T> implements ValueFailure<T> {
   T get failedValue => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $EmptyCopyWith<T, Empty<T>> get copyWith =>
+  _$$EmptyCopyWith<T, _$Empty<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ExceedingLengthCopyWith<T, $Res>
+abstract class _$$ExceedingLengthCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ExceedingLengthCopyWith(
-          ExceedingLength<T> value, $Res Function(ExceedingLength<T>) then) =
-      _$ExceedingLengthCopyWithImpl<T, $Res>;
+  factory _$$ExceedingLengthCopyWith(_$ExceedingLength<T> value,
+          $Res Function(_$ExceedingLength<T>) then) =
+      __$$ExceedingLengthCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue, int max});
 }
 
 /// @nodoc
-class _$ExceedingLengthCopyWithImpl<T, $Res>
+class __$$ExceedingLengthCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ExceedingLengthCopyWith<T, $Res> {
-  _$ExceedingLengthCopyWithImpl(
-      ExceedingLength<T> _value, $Res Function(ExceedingLength<T>) _then)
-      : super(_value, (v) => _then(v as ExceedingLength<T>));
+    implements _$$ExceedingLengthCopyWith<T, $Res> {
+  __$$ExceedingLengthCopyWithImpl(
+      _$ExceedingLength<T> _value, $Res Function(_$ExceedingLength<T>) _then)
+      : super(_value, (v) => _then(v as _$ExceedingLength<T>));
 
   @override
-  ExceedingLength<T> get _value => super._value as ExceedingLength<T>;
+  _$ExceedingLength<T> get _value => super._value as _$ExceedingLength<T>;
 
   @override
   $Res call({
     Object? failedValue = freezed,
     Object? max = freezed,
   }) {
-    return _then(ExceedingLength<T>(
+    return _then(_$ExceedingLength<T>(
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -685,7 +686,7 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ExceedingLength<T> &&
+            other is _$ExceedingLength<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
             const DeepCollectionEquality().equals(other.max, max));
@@ -699,8 +700,9 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith =>
-      _$ExceedingLengthCopyWithImpl<T, ExceedingLength<T>>(this, _$identity);
+  _$$ExceedingLengthCopyWith<T, _$ExceedingLength<T>> get copyWith =>
+      __$$ExceedingLengthCopyWithImpl<T, _$ExceedingLength<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -805,36 +807,36 @@ abstract class ExceedingLength<T> implements ValueFailure<T> {
   int get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith =>
+  _$$ExceedingLengthCopyWith<T, _$ExceedingLength<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MultilineCopyWith<T, $Res>
+abstract class _$$MultilineCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $MultilineCopyWith(
-          Multiline<T> value, $Res Function(Multiline<T>) then) =
-      _$MultilineCopyWithImpl<T, $Res>;
+  factory _$$MultilineCopyWith(
+          _$Multiline<T> value, $Res Function(_$Multiline<T>) then) =
+      __$$MultilineCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$MultilineCopyWithImpl<T, $Res>
+class __$$MultilineCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $MultilineCopyWith<T, $Res> {
-  _$MultilineCopyWithImpl(
-      Multiline<T> _value, $Res Function(Multiline<T>) _then)
-      : super(_value, (v) => _then(v as Multiline<T>));
+    implements _$$MultilineCopyWith<T, $Res> {
+  __$$MultilineCopyWithImpl(
+      _$Multiline<T> _value, $Res Function(_$Multiline<T>) _then)
+      : super(_value, (v) => _then(v as _$Multiline<T>));
 
   @override
-  Multiline<T> get _value => super._value as Multiline<T>;
+  _$Multiline<T> get _value => super._value as _$Multiline<T>;
 
   @override
   $Res call({
     Object? failedValue = freezed,
   }) {
-    return _then(Multiline<T>(
+    return _then(_$Multiline<T>(
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -860,7 +862,7 @@ class _$Multiline<T> implements Multiline<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Multiline<T> &&
+            other is _$Multiline<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue));
   }
@@ -871,8 +873,8 @@ class _$Multiline<T> implements Multiline<T> {
 
   @JsonKey(ignore: true)
   @override
-  $MultilineCopyWith<T, Multiline<T>> get copyWith =>
-      _$MultilineCopyWithImpl<T, Multiline<T>>(this, _$identity);
+  _$$MultilineCopyWith<T, _$Multiline<T>> get copyWith =>
+      __$$MultilineCopyWithImpl<T, _$Multiline<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -974,37 +976,37 @@ abstract class Multiline<T> implements ValueFailure<T> {
   T get failedValue => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $MultilineCopyWith<T, Multiline<T>> get copyWith =>
+  _$$MultilineCopyWith<T, _$Multiline<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListTooShortCopyWith<T, $Res>
+abstract class _$$ListTooShortCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ListTooShortCopyWith(
-          ListTooShort<T> value, $Res Function(ListTooShort<T>) then) =
-      _$ListTooShortCopyWithImpl<T, $Res>;
+  factory _$$ListTooShortCopyWith(
+          _$ListTooShort<T> value, $Res Function(_$ListTooShort<T>) then) =
+      __$$ListTooShortCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue, int min});
 }
 
 /// @nodoc
-class _$ListTooShortCopyWithImpl<T, $Res>
+class __$$ListTooShortCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ListTooShortCopyWith<T, $Res> {
-  _$ListTooShortCopyWithImpl(
-      ListTooShort<T> _value, $Res Function(ListTooShort<T>) _then)
-      : super(_value, (v) => _then(v as ListTooShort<T>));
+    implements _$$ListTooShortCopyWith<T, $Res> {
+  __$$ListTooShortCopyWithImpl(
+      _$ListTooShort<T> _value, $Res Function(_$ListTooShort<T>) _then)
+      : super(_value, (v) => _then(v as _$ListTooShort<T>));
 
   @override
-  ListTooShort<T> get _value => super._value as ListTooShort<T>;
+  _$ListTooShort<T> get _value => super._value as _$ListTooShort<T>;
 
   @override
   $Res call({
     Object? failedValue = freezed,
     Object? min = freezed,
   }) {
-    return _then(ListTooShort<T>(
+    return _then(_$ListTooShort<T>(
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -1036,7 +1038,7 @@ class _$ListTooShort<T> implements ListTooShort<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ListTooShort<T> &&
+            other is _$ListTooShort<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
             const DeepCollectionEquality().equals(other.min, min));
@@ -1050,8 +1052,8 @@ class _$ListTooShort<T> implements ListTooShort<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ListTooShortCopyWith<T, ListTooShort<T>> get copyWith =>
-      _$ListTooShortCopyWithImpl<T, ListTooShort<T>>(this, _$identity);
+  _$$ListTooShortCopyWith<T, _$ListTooShort<T>> get copyWith =>
+      __$$ListTooShortCopyWithImpl<T, _$ListTooShort<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1156,37 +1158,37 @@ abstract class ListTooShort<T> implements ValueFailure<T> {
   int get min => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $ListTooShortCopyWith<T, ListTooShort<T>> get copyWith =>
+  _$$ListTooShortCopyWith<T, _$ListTooShort<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListTooLongCopyWith<T, $Res>
+abstract class _$$ListTooLongCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ListTooLongCopyWith(
-          ListTooLong<T> value, $Res Function(ListTooLong<T>) then) =
-      _$ListTooLongCopyWithImpl<T, $Res>;
+  factory _$$ListTooLongCopyWith(
+          _$ListTooLong<T> value, $Res Function(_$ListTooLong<T>) then) =
+      __$$ListTooLongCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue, int max});
 }
 
 /// @nodoc
-class _$ListTooLongCopyWithImpl<T, $Res>
+class __$$ListTooLongCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ListTooLongCopyWith<T, $Res> {
-  _$ListTooLongCopyWithImpl(
-      ListTooLong<T> _value, $Res Function(ListTooLong<T>) _then)
-      : super(_value, (v) => _then(v as ListTooLong<T>));
+    implements _$$ListTooLongCopyWith<T, $Res> {
+  __$$ListTooLongCopyWithImpl(
+      _$ListTooLong<T> _value, $Res Function(_$ListTooLong<T>) _then)
+      : super(_value, (v) => _then(v as _$ListTooLong<T>));
 
   @override
-  ListTooLong<T> get _value => super._value as ListTooLong<T>;
+  _$ListTooLong<T> get _value => super._value as _$ListTooLong<T>;
 
   @override
   $Res call({
     Object? failedValue = freezed,
     Object? max = freezed,
   }) {
-    return _then(ListTooLong<T>(
+    return _then(_$ListTooLong<T>(
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
@@ -1218,7 +1220,7 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ListTooLong<T> &&
+            other is _$ListTooLong<T> &&
             const DeepCollectionEquality()
                 .equals(other.failedValue, failedValue) &&
             const DeepCollectionEquality().equals(other.max, max));
@@ -1232,8 +1234,8 @@ class _$ListTooLong<T> implements ListTooLong<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
-      _$ListTooLongCopyWithImpl<T, ListTooLong<T>>(this, _$identity);
+  _$$ListTooLongCopyWith<T, _$ListTooLong<T>> get copyWith =>
+      __$$ListTooLongCopyWithImpl<T, _$ListTooLong<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1338,6 +1340,6 @@ abstract class ListTooLong<T> implements ValueFailure<T> {
   int get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
+  _$$ListTooLongCopyWith<T, _$ListTooLong<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

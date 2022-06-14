@@ -15,7 +15,7 @@ class SplashPage extends StatelessWidget {
         state.map(
           initial: (_) {},
           authenticated: (_) => context.router.replace(
-              const RecipeOverviewPageWraperRoute(
+              const RecipePagesWraperRoute(
                   children: [RecipesOverviewPageRoute()])),
           unauthenticated: (_) =>
               context.router.replace(const SignInPageRoute()),

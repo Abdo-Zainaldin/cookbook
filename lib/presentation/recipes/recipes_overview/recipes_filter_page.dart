@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:cookbook_app/presentation/localization/l10n/localization_helper.dart';
+import 'package:cookbook_app/presentation/core/localization/localization_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-import '../../../application/recipe_filter/recipe_filter_bloc.dart';
-import '../../../application/recipe_watcher/recipe_watcher_bloc.dart';
+import '../../../application/recipe/recipe_filter/recipe_filter_bloc.dart';
+import '../../../application/recipe/recipe_watcher/recipe_watcher_bloc.dart';
 import 'widget/recipe_card_widget.dart';
 
 class RecipesFilterPage extends StatelessWidget {
@@ -21,9 +21,11 @@ class RecipesFilterPage extends StatelessWidget {
         listener: (context, state) {
           state.maybeMap(
               loadSuccess: (state) {
+                // if any changes occurred to the recipes notify the RecipeFilterBloc
                 context.read<RecipeFilterBloc>().add(
                     RecipeFilterEvent.initialRecipesChanged(state.recipes));
               },
+              // if there was critical failure pop until recipesOverviewPage route
               loadFailure: (_) => context.router.popUntilRoot(),
               orElse: () {});
         },
@@ -42,7 +44,7 @@ class RecipesFilterPage extends StatelessWidget {
                       children: [
                         ListTile(
                           title: Text(context.recipesFilterInfoTitleStr),
-                          subtitle: Text(context.recipesFilterInfoTitleStr),
+                          subtitle: Text(context.recipesFilterInfoStr),
                         ),
                         const FilterBody(),
                         ListView.builder(
@@ -60,9 +62,8 @@ class RecipesFilterPage extends StatelessWidget {
                 },
               );
             },
-            loadFailure: (state) {
-              return Container();
-            },
+            // This is an impossible case because we're catching it above in the listener
+            loadFailure: (state) => Container(),
           );
         },
       ),

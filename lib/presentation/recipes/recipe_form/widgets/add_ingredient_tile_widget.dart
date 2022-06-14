@@ -1,4 +1,4 @@
-import 'package:cookbook_app/presentation/localization/l10n/localization_helper.dart';
+import 'package:cookbook_app/presentation/core/localization/localization_helper.dart';
 import 'package:cookbook_app/presentation/recipes/recipe_form/misc/build_context_x.dart';
 
 import 'package:flutter/material.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kt_dart/kt.dart';
 
-import '../../../../../application/recipe_form/recipe_form_bloc.dart';
+import '../../../../../application/recipe/recipe_form/recipe_form_bloc.dart';
 import '../misc/recipe_items_presentation_classes.dart';
 
 class AddIngredientTile extends StatelessWidget {
