@@ -12,6 +12,8 @@
     "editTheRecipe": "Tarifi Düzenle",
     "recipeName": "Tarif Adı",
     "emptyRecipesOverViewPage": "Burda Görüntülemek İçin Tarif Ekleyiniz Lütfen",
+    "ingredients": "Içindekiler:",
+    "steps": "Adımlar:",
     "settings": "Ayarlar",
     "local": "Yerel",
     "cloud": "Bulut",

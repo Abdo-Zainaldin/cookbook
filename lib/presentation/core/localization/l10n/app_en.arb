@@ -56,6 +56,14 @@
     "@emptyRecipesOverViewPage": {
         "description": "the showing text when the recipes overview page is empty Add Recipes to see them here"
     },
+    "ingredients": "Ingredients:",
+    "@ingredients": {
+        "description": "the title of the Ingredients section in recipe form page"
+    },
+    "steps": "Steps:",
+    "@steps": {
+        "description": "the title of the Steps section in recipe form page"
+    },
     "settings": "Settings",
     "@settings": {
         "description": "the title of the settings page"

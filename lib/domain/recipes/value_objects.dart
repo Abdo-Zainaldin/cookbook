@@ -26,7 +26,7 @@ class IngredientName extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  static const maxLength = 30;
+  static const maxLength = 60;
 
   factory IngredientName(String input) {
     return IngredientName._(
@@ -43,13 +43,11 @@ class StepBody extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  static const maxLength = 50;
+  static const maxLength = 200;
 
   factory StepBody(String input) {
     return StepBody._(
-      validateMaxStringLength(input, maxLength)
-          .flatMap(validateStringNotEmpty)
-          .flatMap(validateSingleLine),
+      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
     );
   }
 

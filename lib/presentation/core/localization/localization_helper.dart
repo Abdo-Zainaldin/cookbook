@@ -19,6 +19,8 @@ extension BuildContextX on BuildContext {
   String get recipeStr => AppLocalizations.of(this)!.recipe;
   String get emptyRecipesOverViewPageStr =>
       AppLocalizations.of(this)!.emptyRecipesOverViewPage;
+  String get ingredientsStr => AppLocalizations.of(this)!.ingredients;
+  String get stepsStr => AppLocalizations.of(this)!.steps;
   String get savingStr => AppLocalizations.of(this)!.saving;
   String get createRecipeStr => AppLocalizations.of(this)!.createRecipe;
   String get editTheRecipeStr => AppLocalizations.of(this)!.editTheRecipe;

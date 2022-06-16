@@ -23,88 +23,107 @@ class StepsList extends HookWidget {
     final checkboxes = useState<List<bool>>(
         List.from(List.generate(ListItem.maxLength, (_) => false)));
 
-    return BlocConsumer<RecipeFormBloc, RecipeFormState>(
-      listenWhen: (previous, current) =>
-          previous.recipe.steps.isFull != current.recipe.steps.isFull ||
-          previous.recipe.steps.isMinimum != current.recipe.steps.isMinimum ||
-          previous.isSaving != current.isSaving,
-      listener: (context, state) {
-        if (!state.recipe.steps.isMinimum) {
-          FlushbarHelper.createInformation(
-            message: context.stepsListIsTooShortStr,
-          ).show(context);
-        }
-        if (state.recipe.steps.isFull) {
-          FlushbarHelper.createInformation(
-            message: context.stepsListIsTooLongStr,
-          ).show(context);
-        }
-      },
-      buildWhen: (previous, current) =>
-          previous.showErrorMessages != current.showErrorMessages ||
-          previous.isEditing != current.isEditing ||
-          previous.recipe.steps != current.recipe.steps,
-      builder: (context, state) => Consumer<FormSteps>(
-        builder: (context, formSteps, child) {
-          if (state.isCreating || state.isEditing) {
-            return Form(
-              autovalidateMode: state.showErrorMessages
-                  ? AutovalidateMode.always
-                  : AutovalidateMode.disabled,
-              child: ReorderableListView.builder(
-                physics: const ClampingScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: formSteps.value.size,
-                onReorderStart: (index) => FocusScope.of(context).unfocus(),
-                onReorder: (int oldIndex, int newIndex) {
-                  if (newIndex > oldIndex) {
-                    newIndex = newIndex - 1;
-                  }
-                  changeStepsOrder(context, oldIndex, newIndex);
-                },
-                itemBuilder: (context, index) => StepTile(
-                  key: ValueKey(formSteps.value[index].id),
-                  providersContext: context,
-                  index: index,
-                ),
-              ),
-            );
-          }
-          return BlocBuilder<RecipeFormFeaturesBloc, RecipeFormFeaturesState>(
-            buildWhen: (previous, current) =>
-                previous.isAnyFeatureActive != current.isAnyFeatureActive,
-            builder: (context, recipeFormFeaturesState) {
-              return ListView.builder(
-                physics: const ClampingScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: formSteps.value.size,
-                itemBuilder: (BuildContext context, int index) {
-                  // if live cooking feature is active, show steps tiles with checkboxes
-                  return recipeFormFeaturesState.isLiveCooking
-                      ? CheckboxListTile(
-                          key: ValueKey(formSteps.value[index].id),
-                          title: Text(
-                              '${index + 1} - ${formSteps.value[index].body}'),
-                          activeColor: Theme.of(context).colorScheme.primary,
-                          value: checkboxes.value[index],
-                          onChanged: (_) {
-                            List<bool> newCheckBoxes =
-                                List.from(checkboxes.value);
-                            newCheckBoxes[index] = !newCheckBoxes[index];
-                            checkboxes.value = newCheckBoxes;
-                          },
-                        )
-                      : ListTile(
-                          key: ValueKey(formSteps.value[index].id),
-                          title: Text(
-                              '${index + 1} - ${formSteps.value[index].body}'),
-                        );
-                },
-              );
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ListTile(
+          title: Text(context.stepsStr),
+        ),
+        Flexible(
+          child: BlocConsumer<RecipeFormBloc, RecipeFormState>(
+            listenWhen: (previous, current) =>
+                previous.recipe.steps.isFull != current.recipe.steps.isFull ||
+                previous.recipe.steps.isMinimum !=
+                    current.recipe.steps.isMinimum ||
+                previous.isSaving != current.isSaving,
+            listener: (context, state) {
+              if (!state.recipe.steps.isMinimum) {
+                FlushbarHelper.createInformation(
+                  message: context.stepsListIsTooShortStr,
+                ).show(context);
+              }
+              if (state.recipe.steps.isFull) {
+                FlushbarHelper.createInformation(
+                  message: context.stepsListIsTooLongStr,
+                ).show(context);
+              }
             },
-          );
-        },
-      ),
+            buildWhen: (previous, current) =>
+                previous.showErrorMessages != current.showErrorMessages ||
+                previous.isEditing != current.isEditing ||
+                previous.recipe.steps != current.recipe.steps,
+            builder: (context, state) => Consumer<FormSteps>(
+              builder: (context, formSteps, child) {
+                if (state.isCreating || state.isEditing) {
+                  return Form(
+                    autovalidateMode: state.showErrorMessages
+                        ? AutovalidateMode.always
+                        : AutovalidateMode.disabled,
+                    child: ReorderableListView.builder(
+                      physics: const ClampingScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: formSteps.value.size,
+                      onReorderStart: (index) =>
+                          FocusScope.of(context).unfocus(),
+                      onReorder: (int oldIndex, int newIndex) {
+                        if (newIndex > oldIndex) {
+                          newIndex = newIndex - 1;
+                        }
+                        changeStepsOrder(context, oldIndex, newIndex);
+                      },
+                      itemBuilder: (context, index) => StepTile(
+                        key: ValueKey(formSteps.value[index].id),
+                        providersContext: context,
+                        index: index,
+                      ),
+                    ),
+                  );
+                }
+                return BlocBuilder<RecipeFormFeaturesBloc,
+                    RecipeFormFeaturesState>(
+                  buildWhen: (previous, current) =>
+                      previous.isAnyFeatureActive != current.isAnyFeatureActive,
+                  builder: (context, recipeFormFeaturesState) {
+                    return ListView.builder(
+                      physics: const ClampingScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: formSteps.value.size,
+                      itemBuilder: (BuildContext context, int index) {
+                        // if live cooking feature is active, show steps tiles with checkboxes
+                        return recipeFormFeaturesState.isLiveCooking
+                            ? CheckboxListTile(
+                                key: ValueKey(formSteps.value[index].id),
+                                title: Text(
+                                    '${index + 1} - ${formSteps.value[index].body}'),
+                                activeColor:
+                                    Theme.of(context).colorScheme.primary,
+                                value: checkboxes.value[index],
+                                onChanged: (_) {
+                                  List<bool> newCheckBoxes =
+                                      List.from(checkboxes.value);
+                                  newCheckBoxes[index] = !newCheckBoxes[index];
+                                  checkboxes.value = newCheckBoxes;
+                                },
+                              )
+                            : ListTile(
+                                key: ValueKey(formSteps.value[index].id),
+                                title: Text(
+                                    '${index + 1} - ${formSteps.value[index].body}'),
+                              );
+                      },
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ),
+        if (!context.read<RecipeFormBloc>().state.isCreating)
+          const SizedBox(
+            height: 75,
+          )
+      ],
     );
   }
 
